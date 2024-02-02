@@ -1,0 +1,3 @@
+{
+  "extends": ["github>m1sk9/renovate-config"]
+}

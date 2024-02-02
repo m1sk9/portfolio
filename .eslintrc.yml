@@ -1,0 +1,9 @@
+extends:
+  - 'next/core-web-vitals'
+plugins:
+  - '@typescript-eslint'
+rules:
+  'max-params': 'error'
+env:
+  es2021: true
+  node: true

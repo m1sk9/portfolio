@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "yarn@4.1.0",
+  "packageManager": "bun@1.0.25",
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
@@ -11,8 +11,7 @@
     "format": "prettier --write \"./**/**/*.{ts,tsx}\"",
     "check": "prettier --check \"./**/**/*.{ts,tsx}\"",
     "lint-staged": "next lint && prettier --write \"./**/**/*.{ts,tsx}\"",
-    "postinstall": "lefthook install",
-    "prepare": "panda codegen"
+    "postinstall": "lefthook install"
   },
   "dependencies": {
     "clsx": "^2.1.0",
@@ -22,7 +21,6 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.1.0",
-    "@pandacss/dev": "^0.29.1",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@types/bun": "^1.0.4",
     "@types/node": "^20.11.16",

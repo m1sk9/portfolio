@@ -41,7 +41,7 @@ const Display = ({ year, description }: Timeline) => (
 
 export const Timeline = () => {
   return (
-    <div className="mt-20">
+    <div className="mt-10">
       <h1 className="text-3xl">Timeline</h1>
       <div className="mt-5">
         {timelineItems.map((timeline, i) => (

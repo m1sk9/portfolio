@@ -1,8 +1,8 @@
 pre-commit:
   commands:
     lint:
-      glob: "*.{ts,tsx}"
-      run: bun run lint
+      glob: '*.{ts,tsx}'
+      run: yarn run lint
     check:
-      glob: "*.{ts,tsx}"
-      run: bun run check
+      glob: '*.{ts,tsx}'
+      run: yarn run check

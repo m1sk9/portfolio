@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "packageManager": "bun@1.0.25",
+  "author": {
+    "name": "m1sk9",
+    "email": "me@m1sk9.dev"
+  },
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",

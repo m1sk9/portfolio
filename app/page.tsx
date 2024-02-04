@@ -1,5 +1,6 @@
 import { About } from './organisms/about';
 import { Profile } from './organisms/profile';
+import { Project } from './organisms/project';
 import { Skill } from './organisms/skill';
 import { Timeline } from './organisms/timeline';
 
@@ -10,6 +11,7 @@ export default function Home() {
       <Profile />
       <Timeline />
       <Skill />
+      <Project />
     </div>
   );
 }

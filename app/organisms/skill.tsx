@@ -20,7 +20,6 @@ export const Skill = () => {
   return (
     <div className="mt-10">
       <h1 className="text-3xl">Skill</h1>
-      <h2 className="text-2xl mt-3">Programming Languages</h2>
       <div className="mt-2">
         {langSkills.map((langSkill, index) => (
           <>

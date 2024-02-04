@@ -8,7 +8,8 @@ type ProfileLink = {
 
 const profileLinks: ProfileLink[] = [
   { title: 'GitHub', id: 'm1sk9', href: 'https://github.com/m1sk9' },
-  { title: 'X', id: 'm1s2r8', href: 'https://x.com/m1s2r8' }
+  { title: 'X', id: '@m1s2r8', href: 'https://x.com/m1s2r8' },
+  { title: 'Zenn', id: 'm1sk9', href: 'https://zenn.dev/m1sk9' }
 ];
 
 const Display = ({ title, id, href }: ProfileLink) => (

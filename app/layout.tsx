@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" className={clsx(notoSansJP.variable, 'font-sans')}>
-      <body>{children}</body>
+      <body className=" bg-gray-900">{children}</body>
     </html>
   );
 }

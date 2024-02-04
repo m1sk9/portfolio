@@ -1,6 +1,6 @@
 export const Profile = () => {
   return (
-    <article className="mt-20">
+    <div className="mt-20">
       <h1 className="text-3xl">Profile</h1>
       <div className="mt-5">
         <p className="mb-3">
@@ -17,6 +17,6 @@ export const Profile = () => {
           future?
         </p>
       </div>
-    </article>
+    </div>
   );
 };

@@ -1,4 +1,7 @@
+import Image from 'next/image';
+
 import { About } from './organisms/about';
+import { Keys } from './organisms/keys';
 import { Profile } from './organisms/profile';
 import { Project } from './organisms/project';
 import { Skill } from './organisms/skill';
@@ -12,6 +15,15 @@ export default function Home() {
       <Timeline />
       <Skill />
       <Project />
+      <Keys />
+      <p className="mt-2">© {new Date().getFullYear()} m1sk9</p>
+      <Image
+        src={'https://count.getloli.com/get/@m1sk9?theme=rule34'}
+        className="mt-2"
+        width={300}
+        height={300}
+        alt="moe"
+      />
     </div>
   );
 }

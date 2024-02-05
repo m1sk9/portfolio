@@ -12,9 +12,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write \"./**/**/*.{ts,tsx}\"",
-    "check": "prettier --check \"./**/**/*.{ts,tsx}\"",
-    "lint-staged": "next lint && prettier --write \"./**/**/*.{ts,tsx}\"",
+    "format": "prettier --write \"./src/**/*.{ts,tsx}\"",
+    "check": "prettier --check \"./src/**/*.{ts,tsx}\"",
+    "lint-staged": "next lint && prettier --write \"./src/**/*.{ts,tsx}\"",
     "postinstall": "lefthook install"
   },
   "dependencies": {

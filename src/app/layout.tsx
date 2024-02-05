@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import { Twitter } from 'next/dist/lib/metadata/types/twitter-types';
 import { Noto_Sans_JP } from 'next/font/google';
 
-import pkg from '../package.json' assert { type: 'json' };
+import pkg from '../../package.json' assert { type: 'json' };
 import './globals.css';
 
 const notoSansJP = Noto_Sans_JP({

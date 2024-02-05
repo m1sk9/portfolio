@@ -1,11 +1,11 @@
 import Image from 'next/image';
 
-import { About } from '../organisms/about';
-import { Keys } from '../organisms/keys';
-import { Profile } from '../organisms/profile';
-import { Project } from '../organisms/project';
-import { Skill } from '../organisms/skill';
-import { Timeline } from '../organisms/timeline';
+import { About } from '../organisms/About';
+import { Keys } from '../organisms/Keys';
+import { Profile } from '../organisms/Profile';
+import { Project } from '../organisms/Project';
+import { Skill } from '../organisms/Skill';
+import { Timeline } from '../organisms/Timeline';
 
 export default function Home() {
   return (

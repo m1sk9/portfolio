@@ -14,7 +14,6 @@
     "lint": "next lint",
     "format": "prettier --write \"./src/**/*.{ts,tsx}\"",
     "check": "prettier --check \"./src/**/*.{ts,tsx}\"",
-    "lint-staged": "next lint && prettier --write \"./src/**/*.{ts,tsx}\"",
     "postinstall": "lefthook install"
   },
   "dependencies": {

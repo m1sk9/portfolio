@@ -30,6 +30,11 @@ const timelineItems: Timeline[] = [
     year: 2023,
     description:
       'Enters into an outsourcing agreement with Xtraveler, Inc. Started learning Rust.'
+  },
+  {
+    year: 2023,
+    description:
+      'Started development of next generation decentralized social media "Pulsate".'
   }
 ];
 

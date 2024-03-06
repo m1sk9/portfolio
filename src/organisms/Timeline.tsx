@@ -1,56 +1,41 @@
-type Timeline = {
-  year: number;
+import { Description, Heading } from '@/src/molecules/Recipes';
+import { css } from '@/styled-system/css';
+
+type TimelineTypes = {
+  year: string;
   description: string;
 };
 
-const timelineItems: Timeline[] = [
-  { year: 2005, description: 'Born in Japan.' },
-  { year: 2012, description: 'Enter elementary school.' },
-  { year: 2018, description: 'Enter junior high school.' },
+const timelineItems: TimelineTypes[] = [
+  { year: '2005', description: 'Born in Japan.' },
   {
-    year: 2021,
-    description:
-      'Getting started with Minecraft (Bedrock) plugin development in PHP. '
+    year: '2012-2021',
+    description: 'Spending elementary and junior high school years.'
   },
   {
-    year: 2021,
-    description: 'Entered high school. Became a member of approvers.'
+    year: '2021-2024',
+    description: 'Spending high school years.'
   },
   {
-    year: 2022,
-    description:
-      'Start learning TypeScript / Kotlin / Java. Start believing only in statically typed languages.'
-  },
-  {
-    year: 2022,
-    description:
-      'Participation in the operation and development of Gigantic (seichi.network)'
-  },
-  {
-    year: 2023,
-    description:
-      'Enters into an outsourcing agreement with Xtraveler, Inc. Started learning Rust.'
-  },
-  {
-    year: 2023,
+    year: '2023',
     description:
       'Started development of next generation decentralized social media "Pulsate".'
   }
 ];
 
-const Display = ({ year, description }: Timeline) => (
-  <p className="mb-3">
-    {year}: {description}
-  </p>
+const Display = ({ year, description }: TimelineTypes) => (
+  <div className={css({ display: 'flex', flexDirection: 'row', gap: '20px' })}>
+    <p className={css({ color: 'gray.500' })}>{year}</p>
+    <p>{description}</p>
+  </div>
 );
-
 export const Timeline = () => {
   return (
-    <div className="mt-10">
-      <h1 className="text-3xl">Timeline</h1>
-      <div className="mt-5">
-        {timelineItems.map((timeline, i) => (
-          <Display key={i} {...timeline} />
+    <div>
+      <p className={Heading({ level: 'h2' })}>Timeline</p>
+      <div className={Description()}>
+        {timelineItems.map((items, index) => (
+          <Display key={index} {...items} />
         ))}
       </div>
     </div>

@@ -1,3 +1,4 @@
+import { css } from '@/styled-system/css';
 import clsx from 'clsx';
 import { Metadata } from 'next';
 import { Twitter } from 'next/dist/lib/metadata/types/twitter-types';
@@ -73,7 +74,14 @@ export default function RootLayout({
         />
         <link rel="shortcut icon" href="/favicons/favicon.ico" />
       </head>
-      <body className=" bg-gray-900">{children}</body>
+      <body
+        className={css({
+          bgColor: 'black',
+          color: 'white'
+        })}
+      >
+        {children}
+      </body>
     </html>
   );
 }

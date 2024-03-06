@@ -1,50 +1,59 @@
-import Image from 'next/image';
+import { Description, Heading } from '@/src/molecules/Recipes';
+import { css } from '@/styled-system/css';
 
-type ProfileLink = {
+type AboutType = {
   title: string;
-  id: string;
-  href: string;
+  description: string;
 };
 
-const profileLinks: ProfileLink[] = [
-  { title: 'GitHub', id: 'm1sk9', href: 'https://github.com/m1sk9' },
+function calculateAge(birthday: Date) {
+  let age = new Date().getFullYear() - birthday.getFullYear();
+  const month = new Date().getMonth() - birthday.getMonth();
+  if (month < 0 || (month === 0 && new Date().getDate() < birthday.getDate())) {
+    age--;
+  }
+  return age;
+}
+
+const aboutDetails: AboutType[] = [
+  { title: 'Name', description: 'Sho Sakuma' },
   {
-    title: 'Bluesky',
-    id: '@m1sk9.dev',
-    href: 'https://bsky.app/profile/m1sk9.dev'
+    title: 'Birthday',
+    description: `2005/09/02 (${calculateAge(new Date('2005-09-02'))} years old)`
   },
-  { title: 'Zenn', id: 'm1sk9', href: 'https://zenn.dev/m1sk9' },
-  { title: 'X', id: '@m1s2r8', href: 'https://x.com/m1s2r8' }
+  { title: 'Hobby', description: 'Darts, Fashion' },
+  { title: 'Interests', description: 'AI, low-level programming' }
 ];
 
-const Display = ({ title, id, href }: ProfileLink) => (
-  <p>
-    {title}:{' '}
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="underline"
+const Display = ({ title, description }: AboutType) => {
+  const birthday = new Date('2005-09-02');
+  const month = new Date().getMonth() - birthday.getMonth();
+  let age = new Date().getFullYear() - birthday.getFullYear();
+  if (month < 0 || (month === 0 && new Date().getDate() < birthday.getDate())) {
+    age--;
+  }
+
+  return (
+    <div
+      className={css({ display: 'flex', flexDirection: 'row', gap: '20px' })}
     >
-      {id}
-    </a>
-  </p>
-);
+      <p className={css({ color: 'gray.500' })}>{title}</p>
+      <p>{description}</p>
+    </div>
+  );
+};
 
 export const About = () => {
   return (
-    <div className="flex items-center mt-40">
-      <Image
-        src={'https://github.com/m1sk9.png'}
-        className="mr-4"
-        width={100}
-        height={100}
-        alt="m1sk9's icon"
-      />
-      <div className="flex flex-col ml-4">
-        <p className="text-3xl mb-2">m1sk9</p>
-        {profileLinks.map((links, i) => (
-          <Display key={i} {...links} />
+    <div>
+      <p className={Heading({ level: 'h2' })}>About Me</p>
+      <div className={Description()}>
+        <p>
+          I&apos;m a web developer / software developer while attending a
+          university in Japan.
+        </p>
+        {aboutDetails.map((items, index) => (
+          <Display key={index} {...items} />
         ))}
       </div>
     </div>

@@ -5,6 +5,8 @@ import { Skills } from '@/src/organisms/Skills';
 import { Timeline } from '@/src/organisms/Timeline';
 import { css } from '@/styled-system/css';
 import { container } from '@/styled-system/patterns';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -24,6 +26,25 @@ export default function Home() {
         <Timeline />
         <Skills />
         <Projects />
+
+        <div>
+          <Link
+            href={'https://github.com/m1sk9/portfolio'}
+            className={css({ textDecoration: 'underline' })}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Source code available at GitHub
+          </Link>
+          <p className={css({ mt: 2 })}>© {new Date().getFullYear()} m1sk9</p>
+          <Image
+            src={'https://count.getloli.com/get/@m1sk9?theme=rule34'}
+            className={css({ mt: 2 })}
+            width={300}
+            height={300}
+            alt="moe"
+          />
+        </div>
       </div>
     </div>
   );

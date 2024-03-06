@@ -24,7 +24,17 @@ const otherLinks: ProfileLink[] = [
     href: 'https://mi.growthers.dev/@meru'
   },
   {
-    title: 'メール (受信専用)',
+    title: 'GPG Keys',
+    id: 'Available on GitHub',
+    href: 'https://github.com/m1sk9.gpg'
+  },
+  {
+    title: 'SSH Keys',
+    id: 'Available on GitHub',
+    href: 'https://github.com/m1sk9.keys'
+  },
+  {
+    title: 'Email (receive only)',
     id: 'me@m1sk9.dev',
     href: 'mailto:me@m1sk9.dev'
   }

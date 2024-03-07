@@ -1,4 +1,5 @@
 import { css } from '@/styled-system/css';
+import Link from 'next/link';
 
 export type ProfileLink = {
   title: string;
@@ -22,14 +23,14 @@ export const Display = ({ title, id, href }: ProfileLink) => {
     <div>
       <div>
         {title}:{' '}
-        <a
+        <Link
           href={href}
           target="_blank"
           rel="noopener noreferrer"
           className={css({ color: 'aqua', textDecoration: 'underline' })}
         >
           {id}
-        </a>
+        </Link>
       </div>
     </div>
   );

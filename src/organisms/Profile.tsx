@@ -19,6 +19,14 @@ export const Profile = () => {
         <Link href={'/links'} className={css({ color: 'aqua', mt: 2 })}>
           Other Links →
         </Link>
+        <Link
+          href={'https://blog.m1sk9.dev'}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={css({ color: 'aqua' })}
+        >
+          Blog →
+        </Link>
       </div>
     </div>
   );

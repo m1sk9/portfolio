@@ -52,6 +52,7 @@ export const About = () => {
           I&apos;m a web developer / software developer while attending a
           university in Japan.
         </p>
+        <p>owner: pulsate.dev / admin: seichi.click</p>
         {aboutDetails.map((items, index) => (
           <Display key={index} {...items} />
         ))}

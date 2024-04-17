@@ -25,8 +25,8 @@ const otherLinks: ProfileLink[] = [
   },
   {
     title: 'GPG Keys',
-    id: 'Available on GitHub',
-    href: 'https://github.com/m1sk9.gpg'
+    id: 'Available on keys.openpgp.org - Key fingerprint: ABB3 904C 7263 155D 9F5C 34A3 198F 1B4D 8D77 678F',
+    href: 'https://keys.openpgp.org/vks/v1/by-fingerprint/ABB3904C7263155D9F5C34A3198F1B4D8D77678F'
   },
   {
     title: 'SSH Keys',

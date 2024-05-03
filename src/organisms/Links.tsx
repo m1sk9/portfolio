@@ -9,11 +9,6 @@ export type ProfileLink = {
 
 export const profileLinks: ProfileLink[] = [
   { title: 'GitHub', id: 'm1sk9', href: 'https://github.com/m1sk9' },
-  {
-    title: 'Bluesky',
-    id: '@m1sk9.dev',
-    href: 'https://bsky.app/profile/m1sk9.dev'
-  },
   { title: 'Zenn', id: 'm1sk9', href: 'https://zenn.dev/m1sk9' },
   { title: 'X', id: '@m1s2r8', href: 'https://x.com/m1s2r8' }
 ];

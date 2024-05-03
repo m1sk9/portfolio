@@ -20,6 +20,10 @@ const timelineItems: TimelineTypes[] = [
     year: '2023',
     description:
       'Started development of next generation decentralized social media "Pulsate".'
+  },
+  {
+    year: '2024',
+    description: 'Enrolled in a university in Kanagawa Prefecture.'
   }
 ];
 

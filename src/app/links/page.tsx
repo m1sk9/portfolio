@@ -45,6 +45,11 @@ const fediverseProfileLinks: ProfileLink[] = [
     title: 'Misskey (かせいすきー)',
     id: '@m1sk9@kasei.ski',
     href: 'https://kasei.ski/@m1sk9'
+  },
+  {
+    title: 'Bluesky',
+    id: '@m1sk9.dev',
+    href: 'https://bsky.app/profile/m1sk9.dev'
   }
 ];
 
@@ -88,8 +93,8 @@ export default function Links() {
         <div className={css({ mt: 3 })}>
           <p className={Heading({ level: 'h3' })}>Fediverse</p>
           <p>
-            現状公開しているアカウントは Misskey のみで，りんごぱい と Growthers
-            (知り合いのインスタンス) のアカウントのみです．{' '}
+            現状公開しているアカウントは Misskey / Bluesky のみです．りんごぱい
+            と Growthers (知り合いのインスタンス) のアカウントのみです．{' '}
           </p>
           <p>
             かせいすきー

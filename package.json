@@ -17,7 +17,8 @@
     "format:check": "prettier --check \"./src/**/*.astro\"",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "postinstall": "lefthook install"
+    "postinstall": "lefthook install",
+    "prepare": "panda codegen"
   },
   "dependencies": {
     "@astrojs/check": "^0.6.0",
@@ -26,6 +27,8 @@
     "sharp": "^0.33.4"
   },
   "devDependencies": {
+    "@pandacss/astro": "^0.25.0",
+    "@pandacss/dev": "^0.39.1",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "eslint": "^9.3.0",

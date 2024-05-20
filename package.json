@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "4",
   "private": true,
-  "packageManager": "pnpm@9.1.0",
+  "packageManager": "pnpm@9.1.1",
   "author": {
     "name": "m1sk9",
     "email": "me@m1sk9.dev"

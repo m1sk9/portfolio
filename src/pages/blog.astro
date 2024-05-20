@@ -19,7 +19,7 @@ const allBlogPosts = await Astro.glob('./blog/posts/*.md');
       <h1 class={css({ textStyle: 'h1' })}>Blog (Back number)</h1>
     </div>
     <div>
-      <div class={grid({ gridTemplateColumns: 1, gap: 3, mt: 3 })}>
+      <div class={grid({ gridTemplateColumns: 2, gap: 3, mt: 3 })}>
         {
           allBlogPosts
             .sort(
@@ -29,26 +29,33 @@ const allBlogPosts = await Astro.glob('./blog/posts/*.md');
             )
             .filter((post) => post.frontmatter.published)
             .map((post) => (
-              <div>
+              <article class={css({ border: '1px dashed gray', p: 3 })}>
                 <a href={post.url}>
                   <p
                     class={css({
-                      textStyle: 'body'
+                      fontSize: 12,
+                      color: 'gray'
+                    })}
+                  >
+                    {post.frontmatter.date}
+                  </p>
+                  <p
+                    class={css({
+                      fontSize: 16
                     })}
                   >
                     {post.frontmatter.title}
                   </p>
+                  <p
+                    class={css({
+                      textStyle: 'caption',
+                      color: 'gray'
+                    })}
+                  >
+                    {post.frontmatter.description}
+                  </p>
                 </a>
-                <p
-                  class={css({
-                    textStyle: 'body',
-                    lineHeight: 'none',
-                    color: 'gray'
-                  })}
-                >
-                  {post.frontmatter.description}
-                </p>
-              </div>
+              </article>
             ))
         }
       </div>

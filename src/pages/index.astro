@@ -2,7 +2,17 @@
 import Layout from '../organisms/Layout.astro';
 import { css } from '../../styled-system/css';
 import { center, grid } from '../../styled-system/patterns';
+import { readFile } from 'fs/promises';
 
+interface ProjectProps {
+  name: string;
+  description: string;
+  repository: string;
+}
+
+const allProjects: ProjectProps[] = JSON.parse(
+  await readFile('public/project-data.json', 'utf-8')
+);
 const allBlogPosts = await Astro.glob('./blog/posts/*.md');
 ---
 
@@ -34,8 +44,42 @@ const allBlogPosts = await Astro.glob('./blog/posts/*.md');
     </div>
 
     <div>
-      <h2 class={css({ textStyle: 'h2' })}>Recent Blog</h2>
-      <div class={grid({ gridTemplateColumns: 1, gap: 3, mt: 3 })}>
+      <h2 class={css({ textStyle: 'h2' })}>Projects</h2>
+      <div
+        class={grid({
+          gridTemplateColumns: { base: 2 },
+          gap: 3,
+          mt: 3
+        })}
+      >
+        {
+          allProjects.map((project) => {
+            return (
+              <article class={css({ border: '1px dashed gray', p: 3 })}>
+                <a
+                  href={new URL(project.repository, 'https://github.com').href}
+                >
+                  {project.name}
+                  <p class={css({ textStyle: 'caption', color: 'gray' })}>
+                    {project.description}
+                  </p>
+                </a>
+              </article>
+            );
+          })
+        }
+      </div>
+    </div>
+
+    <div class={css({ mt: 10 })}>
+      <a href="/blog" class={css({ textStyle: 'h2' })}>Blog</a>
+      <div
+        class={grid({
+          gridTemplateColumns: { base: 2 },
+          gap: 3,
+          mt: 3
+        })}
+      >
         {
           allBlogPosts
             .sort(
@@ -46,31 +90,35 @@ const allBlogPosts = await Astro.glob('./blog/posts/*.md');
             .filter((post) => post.frontmatter.published)
             .slice(0, 3)
             .map((post) => (
-              <div>
+              <article class={css({ border: '1px dashed gray', p: 3 })}>
                 <a href={post.url}>
                   <p
                     class={css({
-                      textStyle: 'body'
+                      fontSize: 12,
+                      color: 'gray'
+                    })}
+                  >
+                    {post.frontmatter.date}
+                  </p>
+                  <p
+                    class={css({
+                      fontSize: 16
                     })}
                   >
                     {post.frontmatter.title}
                   </p>
+                  <p
+                    class={css({
+                      textStyle: 'caption',
+                      color: 'gray'
+                    })}
+                  >
+                    {post.frontmatter.description}
+                  </p>
                 </a>
-                <p
-                  class={css({
-                    textStyle: 'body',
-                    lineHeight: 'none',
-                    color: 'gray'
-                  })}
-                >
-                  {post.frontmatter.description}
-                </p>
-              </div>
+              </article>
             ))
         }
-        <a href="/blog" class={css({ mt: 10, textStyle: 'body' })}>
-          View all blog posts
-        </a>
       </div>
     </div>
   </body>

@@ -64,7 +64,7 @@ interface Props {
   >
     <header
       class={container({
-        marginBottom: '2rem',
+        marginBottom: '32px',
         display: 'flex',
         justifyContent: 'flex-end',
         alignItems: 'center',
@@ -89,9 +89,20 @@ interface Props {
       </nav>
     </header>
 
-    <body class={css({ marginBottom: 'rem' })}>
+    <body class={css({ marginBottom: '20px' })}>
       <slot />
     </body>
+
+    <footer
+      class={container({
+        display: 'flex',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+        pt: 4
+      })}
+    >
+      <p>&copy; 2021 m1sk9.dev</p>
+    </footer>
 
     <style is:global>
       @font-face {
@@ -102,11 +113,6 @@ interface Props {
       body {
         color: white;
         background-color: #070513;
-      }
-
-      a:hover {
-        text-decoration: underline;
-        color: aqua;
       }
     </style>
   </body>

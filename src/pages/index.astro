@@ -13,7 +13,7 @@ interface ProjectProps {
 const allProjects: ProjectProps[] = JSON.parse(
   await readFile('public/project-data.json', 'utf-8')
 );
-const allBlogPosts = await Astro.glob('./blog/posts/*.md');
+const allBlogPosts = await Astro.glob('./blog/posts/**/*.md');
 ---
 
 <Layout title="m1sk9's portfolio">

@@ -96,12 +96,13 @@ interface Props {
     <footer
       class={container({
         display: 'flex',
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
         alignItems: 'center',
-        pt: 4
+        mt: 20,
+        padding: '2rem'
       })}
     >
-      <p>&copy; 2021 m1sk9.dev</p>
+      <p class={css({ textStyle: 'body' })}>&copy; 2024 m1sk9</p>
     </footer>
 
     <style is:global>

@@ -88,7 +88,7 @@ const allBlogPosts = await Astro.glob('./blog/posts/*.md');
                 new Date(a.frontmatter.date).getTime()
             )
             .filter((post) => post.frontmatter.published)
-            .slice(0, 3)
+            .slice(0, 4)
             .map((post) => (
               <article class={css({ border: '1px dashed gray', p: 3 })}>
                 <a href={post.url}>

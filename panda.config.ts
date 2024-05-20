@@ -12,6 +12,17 @@ export const textStyles = defineTextStyles({
       textTransform: 'None'
     }
   },
+  caption: {
+    value: {
+      fontFamily: 'LINE Seed',
+      fontWeight: 500,
+      fontSize: '14px',
+      lineHeight: '26px',
+      letterSpacing: 'normal',
+      textDecoration: 'None',
+      textTransform: 'None'
+    }
+  },
   h1: {
     value: {
       fontFamily: 'LINE Seed',

@@ -73,6 +73,9 @@ interface Props {
     >
       <nav>
         <ul class={container({ display: 'flex', gap: '1rem' })}>
+          <a href="/">
+            <Icon name="ri:home-4-line" />
+          </a>
           <a href="https://github.com/m1sk9">
             <Icon name="ri:github-line" />
           </a>
@@ -101,11 +104,8 @@ interface Props {
         background-color: #070513;
       }
 
-      a {
-        text-decoration: underline;
-      }
-
       a:hover {
+        text-decoration: underline;
         color: aqua;
       }
     </style>

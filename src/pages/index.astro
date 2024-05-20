@@ -1,11 +1,35 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { css } from '../../styled-system/css';
+import { center } from '../../styled-system/patterns';
 ---
 
 <Layout title="Home">
   <body>
-    <h1 class={css({ fontSize: '4xl' })}>LINE Seed</h1>
-    <h1 class={css({ fontSize: '4xl' })}>こんにちは</h1>
+    <div
+      class={center({
+        flexDirection: 'column',
+        h: 'full',
+        mb: 10
+      })}
+    >
+      <img
+        class={css({ borderRadius: 50 })}
+        src="./icon.jpg"
+        width="100"
+        ,
+        height="100"
+        alt="m1sk9 のアイコン"
+      />
+      <h1 class={css({ textStyle: 'h1', mt: 2 })}>Hi there! 👋</h1>
+
+      <div class={css({ textStyle: 'body', mt: 5 })}>
+        <p>I'm m1sk9.</p>
+        <p>
+          I'm an engineer studying computer science at university. I like
+          statically typed languages. I often write TypeScript and Rust.
+        </p>
+      </div>
+    </div>
   </body>
 </Layout>

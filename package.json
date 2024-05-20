@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "4",
   "private": true,
-  "packageManager": "pnpm@8.15.8",
+  "packageManager": "pnpm@9.1.1",
   "author": {
     "name": "m1sk9",
     "email": "me@m1sk9.dev"
@@ -31,7 +31,7 @@
     "@pandacss/astro": "^0.25.0",
     "@pandacss/dev": "^0.39.1",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
     "eslint": "^9.3.0",
     "eslint-plugin-astro": "^1.2.0",
     "lefthook": "^1.6.12",

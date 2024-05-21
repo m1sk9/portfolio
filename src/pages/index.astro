@@ -58,6 +58,7 @@ const allBlogPosts = await Astro.glob('./blog/posts/**/*.md');
               <article class={css({ border: '1px dashed gray', p: 3 })}>
                 <a
                   href={new URL(project.repository, 'https://github.com').href}
+                  class={css({ textStyle: 'body' })}
                 >
                   {project.name}
                   <p class={css({ textStyle: 'caption', color: 'gray' })}>
@@ -95,14 +96,16 @@ const allBlogPosts = await Astro.glob('./blog/posts/**/*.md');
                   <p
                     class={css({
                       fontSize: 12,
+                      textStyle: 'body',
                       color: 'gray'
                     })}
                   >
-                    {post.frontmatter.date}
+                    {post.frontmatter.published_at}
                   </p>
                   <p
                     class={css({
-                      fontSize: 16
+                      fontSize: 16,
+                      textStyle: 'body'
                     })}
                   >
                     {post.frontmatter.title}

@@ -1,0 +1,56 @@
+---
+import { css } from '../../styled-system/css';
+import { grid } from '../../styled-system/patterns';
+
+const allBlogPosts = await Astro.glob('../pages/blog/**/*.md');
+---
+
+<div
+  class={grid({
+    gridTemplateColumns: { base: 2 },
+    gap: 3,
+    mt: 3
+  })}
+>
+  {
+    allBlogPosts
+      .sort(
+        (a, b) =>
+          new Date(b.frontmatter.date).getTime() -
+          new Date(a.frontmatter.date).getTime()
+      )
+      .filter((post) => post.frontmatter.published)
+      .slice(0, 4)
+      .map((post) => (
+        <article class={css({ border: '1px dashed gray', p: 3 })}>
+          <a href={post.url}>
+            <p
+              class={css({
+                fontSize: 12,
+                textStyle: 'body',
+                color: 'gray'
+              })}
+            >
+              {post.frontmatter.published_at}
+            </p>
+            <p
+              class={css({
+                fontSize: 16,
+                textStyle: 'body'
+              })}
+            >
+              {post.frontmatter.title}
+            </p>
+            <p
+              class={css({
+                textStyle: 'caption',
+                color: 'gray'
+              })}
+            >
+              {post.frontmatter.description}
+            </p>
+          </a>
+        </article>
+      ))
+  }
+</div>

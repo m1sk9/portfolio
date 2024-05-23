@@ -6,11 +6,9 @@ published: true
 published_at: '2024-05-23'
 ---
 
-**さよならはまたであうためのおまじない**
-
 ![](/public/post-image/2024/f*ck-twitter/fuck-twitter-1.jpg)
 
-**TL;DR: 移行先は "[]" . このブログを読んだ知り合いはこれをフォローしておけば大丈夫です.**
+**TL;DR: 移行先は "[@m1sk9@mstdn.maud.io](https://mstdn.maud.io/@m1sk9)" . このブログを読んだ知り合いはこれをフォローしておけば大丈夫です.**
 
 ---
 
@@ -22,9 +20,9 @@ published_at: '2024-05-23'
 
 **「さようなら、全ての Twitter ユーザー」**
 
-## Twitter をやめます
+## Twitter, やめます
 
-2024/05/17 に `x.com` にドメインが置き換わり始めてしまいました. 正直これに関しては2022年10月に買収が完了してからもう2年近く経っているのにこの時期まで `twitter.com` だったわけなので別の意味で置き換わってよかったなとは思っていました **が**, 置き換わった瞬間 Firefox が出禁になりました. (トラッキング保護を弾いているようなのでそういうこと. ほんまお前マジで)
+2024/05/17 に `x.com` にドメインが置き換わり始めてしまいました. 正直これに関しては2022年10月に買収が完了してからもう2年近く経っているのにこの時期まで `twitter.com` だったわけなので別の意味で置き換わってよかったなとは思っていました **が**, 置き換わった瞬間 Firefox が出禁になりました. (トラッカーを弾く Firefox 独自の強化型トラッキング保護を名指しで弾いているようなので「そういう」こと. **ほんまお前マジで**)
 
 ![](/public/post-image/2024/f*ck-twitter/fuck-twitter-2.jpg)
 
@@ -36,7 +34,7 @@ published_at: '2024-05-23'
 
 現在私が持っている分散型SNSアカウントは以下のとおりです.
 
-1. Mastodon - [`:don:`(末代)](https://mstdn.maud.io): []
+1. Mastodon - [`:don:`(末代)](https://mstdn.maud.io): https://mstdn.maud.io/@m1sk9
 2. Misskey - [Growthers](https://mi.growthers.dev): https://mi.growthers.dev/@meru
 3. Misskey - [りんごぱい](https://misskey.04.si/): https://misskey.04.si/@m1sk9
 4. Bluesky: https://bsky.app/profile/m1sk9.dev
@@ -47,7 +45,7 @@ published_at: '2024-05-23'
 
 実は一週間近く mstdn.jp でアカウントを持っていましたが, いろんな理由で fedibird.com に行き, :don: に逃げました.
 
-もう両方のアカウントで引っ越しの処理をかけています. mstdn.jp のアカウントをフォローしてくれた4人のお友達, ごめんね! 把握しておくれ...
+**もう両方のアカウントで引っ越しの処理をかけています. mstdn.jp のアカウントをフォローしてそのまた fedibird.com もフォローしてくれた4人のお友達, ごめんね! 把握していておくれ...**
 
 ## Twitter はどうするの?
 

@@ -26,6 +26,7 @@ const { title, description, published_at } = Astro.props.frontmatter;
       })}
     >
       <h1 class={css({ textStyle: 'h1' })}>{title}</h1>
+      <p class={css({ textStyle: 'body', fontSize: '16px' })}>{description}</p>
       <p class={css({ textStyle: 'body', fontSize: '16px', color: 'gray' })}>
         {
           new Intl.DateTimeFormat('en-US', {

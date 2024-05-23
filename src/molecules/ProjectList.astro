@@ -1,0 +1,48 @@
+---
+/**
+ * fs is "Node.js" File System module.
+ * This is likely to be detrimental to future migration of Bun, etc.
+ */
+
+import { readFile } from 'fs/promises';
+import { grid } from '../../styled-system/patterns';
+import { css } from '../../styled-system/css';
+
+interface ProjectProps {
+  name: string;
+  description: string;
+  repository: string;
+}
+
+const allProjects: ProjectProps[] = JSON.parse(
+  await readFile('public/project-data.json', 'utf-8')
+);
+---
+
+<div>
+  <div
+    class={grid({
+      gridTemplateColumns: { base: 2 },
+      gap: 3,
+      mt: 3
+    })}
+  >
+    {
+      allProjects.map((project) => {
+        return (
+          <article class={css({ border: '1px dashed gray', p: 3 })}>
+            <a
+              href={new URL(project.repository, 'https://github.com').href}
+              class={css({ textStyle: 'body' })}
+            >
+              {project.name}
+              <p class={css({ textStyle: 'caption', color: 'gray' })}>
+                {project.description}
+              </p>
+            </a>
+          </article>
+        );
+      })
+    }
+  </div>
+</div>

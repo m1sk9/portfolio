@@ -1,19 +1,10 @@
 ---
 import Layout from '../organisms/Layout.astro';
 import { css } from '../../styled-system/css';
-import { center, grid } from '../../styled-system/patterns';
-import { readFile } from 'fs/promises';
+import { center } from '../../styled-system/patterns';
+
 import BlogPostList from '../molecules/BlogPostList.astro';
-
-interface ProjectProps {
-  name: string;
-  description: string;
-  repository: string;
-}
-
-const allProjects: ProjectProps[] = JSON.parse(
-  await readFile('public/project-data.json', 'utf-8')
-);
+import ProjectList from '../molecules/ProjectList.astro';
 ---
 
 <Layout title="m1sk9's portfolio">
@@ -45,31 +36,7 @@ const allProjects: ProjectProps[] = JSON.parse(
 
     <div>
       <h2 class={css({ textStyle: 'h2' })}>Projects</h2>
-      <div
-        class={grid({
-          gridTemplateColumns: { base: 2 },
-          gap: 3,
-          mt: 3
-        })}
-      >
-        {
-          allProjects.map((project) => {
-            return (
-              <article class={css({ border: '1px dashed gray', p: 3 })}>
-                <a
-                  href={new URL(project.repository, 'https://github.com').href}
-                  class={css({ textStyle: 'body' })}
-                >
-                  {project.name}
-                  <p class={css({ textStyle: 'caption', color: 'gray' })}>
-                    {project.description}
-                  </p>
-                </a>
-              </article>
-            );
-          })
-        }
-      </div>
+      <ProjectList />
     </div>
 
     <div class={css({ mt: 10 })}>

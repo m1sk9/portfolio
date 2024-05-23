@@ -5,7 +5,7 @@ export const textStyles = defineTextStyles({
     value: {
       fontFamily: 'LINE Seed',
       fontWeight: 500,
-      fontSize: '16px',
+      fontSize: '18px',
       lineHeight: '26px',
       letterSpacing: 'normal',
       textDecoration: 'None',

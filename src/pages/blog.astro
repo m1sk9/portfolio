@@ -2,8 +2,7 @@
 import Layout from '../organisms/Layout.astro';
 import { css } from '../../styled-system/css';
 import { center, grid } from '../../styled-system/patterns';
-
-const allBlogPosts = await Astro.glob('./blog/posts/**/*.md');
+import BlogPostList from '../molecules/BlogPostList.astro';
 ---
 
 <Layout title="m1sk9's blog" description="m1sk9's blog">
@@ -16,51 +15,8 @@ const allBlogPosts = await Astro.glob('./blog/posts/**/*.md');
         gap: 3
       })}
     >
-      <h1 class={css({ textStyle: 'h1' })}>Blog (Back number)</h1>
+      <h1 class={css({ textStyle: 'h1' })}>Blog</h1>
     </div>
-    <div>
-      <div class={grid({ gridTemplateColumns: 2, gap: 3, mt: 3 })}>
-        {
-          allBlogPosts
-            .sort(
-              (a, b) =>
-                new Date(b.frontmatter.date).getTime() -
-                new Date(a.frontmatter.date).getTime()
-            )
-            .filter((post) => post.frontmatter.published)
-            .map((post) => (
-              <article class={css({ border: '1px dashed gray', p: 3 })}>
-                <a href={post.url}>
-                  <p
-                    class={css({
-                      fontSize: 12,
-                      textStyle: 'body',
-                      color: 'gray'
-                    })}
-                  >
-                    {post.frontmatter.published_at}
-                  </p>
-                  <p
-                    class={css({
-                      fontSize: 16,
-                      textStyle: 'body'
-                    })}
-                  >
-                    {post.frontmatter.title}
-                  </p>
-                  <p
-                    class={css({
-                      textStyle: 'caption',
-                      color: 'gray'
-                    })}
-                  >
-                    {post.frontmatter.description}
-                  </p>
-                </a>
-              </article>
-            ))
-        }
-      </div>
-    </div>
+    <BlogPostList />
   </body>
 </Layout>

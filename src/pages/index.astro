@@ -1,19 +1,10 @@
 ---
 import Layout from '../organisms/Layout.astro';
 import { css } from '../../styled-system/css';
-import { center, grid } from '../../styled-system/patterns';
-import { readFile } from 'fs/promises';
+import { center } from '../../styled-system/patterns';
 
-interface ProjectProps {
-  name: string;
-  description: string;
-  repository: string;
-}
-
-const allProjects: ProjectProps[] = JSON.parse(
-  await readFile('public/project-data.json', 'utf-8')
-);
-const allBlogPosts = await Astro.glob('./blog/posts/**/*.md');
+import BlogPostList from '../molecules/BlogPostList.astro';
+import ProjectList from '../molecules/ProjectList.astro';
 ---
 
 <Layout title="m1sk9's portfolio">
@@ -45,84 +36,12 @@ const allBlogPosts = await Astro.glob('./blog/posts/**/*.md');
 
     <div>
       <h2 class={css({ textStyle: 'h2' })}>Projects</h2>
-      <div
-        class={grid({
-          gridTemplateColumns: { base: 2 },
-          gap: 3,
-          mt: 3
-        })}
-      >
-        {
-          allProjects.map((project) => {
-            return (
-              <article class={css({ border: '1px dashed gray', p: 3 })}>
-                <a
-                  href={new URL(project.repository, 'https://github.com').href}
-                  class={css({ textStyle: 'body' })}
-                >
-                  {project.name}
-                  <p class={css({ textStyle: 'caption', color: 'gray' })}>
-                    {project.description}
-                  </p>
-                </a>
-              </article>
-            );
-          })
-        }
-      </div>
+      <ProjectList />
     </div>
 
     <div class={css({ mt: 10 })}>
-      <h2 class={css({ textStyle: 'h2' })}>Blog</h2>
-      <div
-        class={grid({
-          gridTemplateColumns: { base: 2 },
-          gap: 3,
-          mt: 3
-        })}
-      >
-        {
-          allBlogPosts
-            .sort(
-              (a, b) =>
-                new Date(b.frontmatter.date).getTime() -
-                new Date(a.frontmatter.date).getTime()
-            )
-            .filter((post) => post.frontmatter.published)
-            .slice(0, 4)
-            .map((post) => (
-              <article class={css({ border: '1px dashed gray', p: 3 })}>
-                <a href={post.url}>
-                  <p
-                    class={css({
-                      fontSize: 12,
-                      textStyle: 'body',
-                      color: 'gray'
-                    })}
-                  >
-                    {post.frontmatter.published_at}
-                  </p>
-                  <p
-                    class={css({
-                      fontSize: 16,
-                      textStyle: 'body'
-                    })}
-                  >
-                    {post.frontmatter.title}
-                  </p>
-                  <p
-                    class={css({
-                      textStyle: 'caption',
-                      color: 'gray'
-                    })}
-                  >
-                    {post.frontmatter.description}
-                  </p>
-                </a>
-              </article>
-            ))
-        }
-      </div>
+      <h2 class={css({ textStyle: 'h2' })}>Latest Articles</h2>
+      <BlogPostList />
     </div>
   </body>
 </Layout>

@@ -8,7 +8,13 @@ export default defineConfig({
     pandacss(),
     icon({
       include: {
-        ri: ['home-4-line', 'github-line', 'mastodon-line', 'bluesky-fill']
+        ri: [
+          'home-4-line',
+          'github-line',
+          'mastodon-line',
+          'bluesky-fill',
+          'quill-pen-fill'
+        ]
       }
     })
   ]

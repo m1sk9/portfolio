@@ -12,7 +12,6 @@ export default defineConfig({
           'home-4-line',
           'github-line',
           'mastodon-line',
-          'bluesky-fill',
           'quill-pen-fill',
           'link'
         ]

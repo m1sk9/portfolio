@@ -12,15 +12,15 @@ Built with Astro + PandaCSS.
 - Start development server:
 
 ```sh
-bun run dev
+pnpm run dev
 ```
 
 - Build a portfolio:
 
 ```sh
-bun run build
+pnpm run build
 ```
 
 ---
 
-- [v3 (archive)](https://github.com/m1sk9/portfolio/releases/tag/v3)
+- [v3 (archive)](https://github.com/m1sk9/portfolio/tree/v3)

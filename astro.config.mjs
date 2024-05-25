@@ -13,7 +13,8 @@ export default defineConfig({
           'github-line',
           'mastodon-line',
           'bluesky-fill',
-          'quill-pen-fill'
+          'quill-pen-fill',
+          'link'
         ]
       }
     })

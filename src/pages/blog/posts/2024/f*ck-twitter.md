@@ -6,7 +6,7 @@ published: true
 published_at: '2024-05-23'
 ---
 
-![](/public/post-image/2024/f*ck-twitter/fuck-twitter-1.jpg)
+![](/post-image/2024/f*ck-twitter/fuck-twitter-1.jpg)
 
 **TL;DR: 移行先は "[@m1sk9@mstdn.maud.io](https://mstdn.maud.io/@m1sk9)" . このブログを読んだ知り合いはこれをフォローしておけば大丈夫です.**
 
@@ -24,7 +24,7 @@ published_at: '2024-05-23'
 
 2024/05/17 に `x.com` にドメインが置き換わり始めてしまいました. 正直これに関しては2022年10月に買収が完了してからもう2年近く経っているのにこの時期まで `twitter.com` だったわけなので別の意味で置き換わってよかったなとは思っていました **が**, 置き換わった瞬間 Firefox が出禁になりました. (トラッカーを弾く Firefox 独自の強化型トラッキング保護を名指しで弾いているようなので「そういう」こと. **ほんまお前マジで**)
 
-![](/public/post-image/2024/f*ck-twitter/fuck-twitter-2.jpg)
+![](/post-image/2024/f*ck-twitter/fuck-twitter-2.jpg)
 
 今は普通にアクセス出来るようになっていますが, 最近の情勢を見ていると Twitter がお釈迦になる未来がそろそろ訪れそう. ということでアカウント移行を始めました.
 

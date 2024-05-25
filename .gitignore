@@ -41,3 +41,6 @@ styled-system-studio
 
 # dist
 dist
+
+# generated types
+.astro/

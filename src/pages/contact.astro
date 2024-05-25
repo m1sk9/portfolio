@@ -1,0 +1,104 @@
+---
+import { css } from '../../styled-system/css';
+import { center, grid } from '../../styled-system/patterns';
+import { readFile } from 'fs/promises';
+
+import Layout from '../organisms/Layout.astro';
+
+interface LinksProps {
+  title: string;
+  id: string;
+  url: string;
+  iconId: string;
+}
+
+interface ContactProps {
+  link: LinksProps;
+  description: string;
+}
+
+const linksList: LinksProps[] = JSON.parse(
+  await readFile('public/links-data.json', 'utf-8')
+);
+const contactList: ContactProps[] = JSON.parse(
+  await readFile('public/contact-data.json', 'utf-8')
+);
+---
+
+<Layout title="Contact">
+  <body>
+    <div
+      class={center({
+        flexDirection: 'column',
+        h: 'full',
+        mb: 10,
+        gap: 3
+      })}
+    >
+      <h1 class={css({ textStyle: 'h1' })}>Contact & Links</h1>
+    </div>
+
+    <div
+      class={grid({
+        gridTemplateColumns: { base: '1fr', md: '1fr 1fr' },
+        mt: 3
+      })}
+    >
+      {
+        linksList.map((item) => {
+          return (
+            <p
+              class={css({
+                textStyle: 'body'
+              })}
+            >
+              {item.title}:
+              <a
+                href={item.url}
+                class={css({
+                  textDecoration: 'underline'
+                })}
+              >
+                {item.id}
+              </a>
+            </p>
+          );
+        })
+      }
+    </div>
+
+    <div
+      class={css({
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 2,
+        mt: 10
+      })}
+    >
+      {
+        contactList.map((item) => {
+          return (
+            <p
+              class={css({
+                textStyle: 'body'
+              })}
+            >
+              {item.link.title}:
+              <a
+                href={item.link.url}
+                class={css({
+                  textDecoration: 'underline'
+                })}
+              >
+                {item.link.id}
+              </a>
+              <p class={css({ textStyle: 'caption', color: 'gray' })}>
+                → {item.description}
+              </p>
+            </p>
+          );
+        })
+      }
+    </div>
+  </body>
+</Layout>

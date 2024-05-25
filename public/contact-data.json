@@ -1,0 +1,58 @@
+[
+  {
+    "link": {
+      "title": "Discord",
+      "id": "m1sk9",
+      "url": "https://discord.com/users/586824421470109716/"
+    },
+    "description": "フレンド以外のDMは受け付けていません. Pulsate や ギガンティック☆整地鯖 の公式Discordには確実にいますのでそちらでお願いします."
+  },
+  {
+    "link": {
+      "title": "Mastodon (末代)",
+      "id": "@m1sk9@mstdn.maud.io",
+      "url": "https://mstdn.maud.io/@m1sk9"
+    },
+    "description": "メインで使用している Mastodon インスタンスです. 基本的にはこのアカウントで活動していることが多いです."
+  },
+  {
+    "link": {
+      "title": "Misskey (Growthers)",
+      "id": "@meru@mi.growthers.dev",
+      "url": "https://mi.growthers.dev/@meru"
+    },
+    "description": "サブの Misskey インスタンス. 避難用です."
+  },
+  {
+    "link": {
+      "title": "Misskey (りんごぱい)",
+      "id": "@m1sk9@misskey.04.si",
+      "url": "https://misskey.04.si/@m1sk9"
+    },
+    "description": "サブの Misskey インスタンス(2)."
+  },
+  {
+    "link": {
+      "title": "Bluesky",
+      "id": "@m1sk9.dev",
+      "url": "https://bsky.app/profile/m1sk9.dev"
+    },
+    "description": "AT Protocol をしゃべるときにつかいます"
+  },
+  {
+    "link": {
+      "title": "X",
+      "id": "m1s2r8",
+      "url": "https://x.com/m1s2r8"
+    },
+    "description": "もう使っていませんしログインもしてません. 年内いっぱいで削除します."
+  },
+  {
+    "link": {
+      "title": "Email",
+      "id": "me@m1sk9.dev",
+      "url": "mailto:me@m1sk9.dev"
+    },
+    "description": "公開しているメールアドレスですが, メールサーバーを持っていないため受信専用です. (Cloudflare Email Routing を使っています)"
+  }
+]

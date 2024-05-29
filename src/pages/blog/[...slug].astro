@@ -1,0 +1,78 @@
+---
+import Layout from '../../organisms/Layout.astro';
+import lib from 'zenn-markdown-html';
+import { getAllPosts } from '../../lib/blog';
+
+import 'zenn-content-css';
+import { center } from '../../../styled-system/patterns';
+import { css } from '../../../styled-system/css';
+
+const markdownToHtml = lib.default ? lib.default : lib;
+
+export interface Props {
+  title: string;
+  emoji: string;
+  tags: string[];
+  date: string;
+  body: string;
+}
+
+export async function getStaticPaths() {
+  const posts = await getAllPosts();
+  return posts.map((post) => {
+    return {
+      params: {
+        slug: post.slug
+      },
+      props: {
+        title: post.title,
+        tags: post.tags,
+        date: post.date,
+        body: post.body
+      }
+    };
+  });
+}
+
+const { title, tags, date, body } = Astro.props;
+const slug = Astro.params.slug;
+const html = markdownToHtml(body, {
+  embedOrigin: 'https://embed.zenn.studio'
+});
+---
+
+<Layout title={title}>
+  <body>
+    <div
+      class={center({
+        flexDirection: 'column',
+        h: 'full',
+        mb: 10,
+        gap: 3
+      })}
+    >
+      <h1 class={css({ textStyle: 'h1' })}>{title}</h1>
+      <p class={css({ textStyle: 'body', fontSize: '16px', color: 'gray' })}>
+        {tags.map((item) => `#${item} `)}
+      </p>
+      <p class={css({ textStyle: 'body', fontSize: '16px', color: 'gray' })}>
+        {
+          new Intl.DateTimeFormat('en-US', {
+            dateStyle: 'long'
+          }).format(new Date(date))
+        }
+      </p>
+    </div>
+
+    <div class="znc">
+      <Fragment class="post-body" set:html={html} />
+    </div>
+  </body>
+  <style>
+    .znc {
+      font-family: 'LINE Seed';
+      font-size: 16px;
+      color: black;
+    }
+  </style>
+</Layout>

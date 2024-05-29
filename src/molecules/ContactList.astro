@@ -1,0 +1,55 @@
+---
+import { css } from '../../styled-system/css';
+import { center, grid } from '../../styled-system/patterns';
+import { readFile } from 'fs/promises';
+
+interface LinksProps {
+  title: string;
+  id: string;
+  url: string;
+  iconId: string;
+}
+
+interface ContactProps {
+  link: LinksProps;
+  description: string;
+}
+
+const contactList: ContactProps[] = JSON.parse(
+  await readFile('public/contact-data.json', 'utf-8')
+);
+---
+
+<div
+  class={css({
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 2,
+    mt: 3
+  })}
+>
+  {
+    contactList.map((item) => {
+      return (
+        <p
+          class={css({
+            textStyle: 'body'
+          })}
+        >
+          {item.link.title}:
+          <a
+            href={item.link.url}
+            class={css({
+              textDecoration: 'underline'
+            })}
+          >
+            {item.link.id}
+          </a>
+          <p class={css({ textStyle: 'caption', color: 'gray' })}>
+            → {item.description}
+          </p>
+        </p>
+      );
+    })
+  }
+</div>

@@ -5,6 +5,7 @@ import { center } from '../../styled-system/patterns';
 
 import BlogPostList from '../molecules/BlogPostList.astro';
 import ProjectList from '../molecules/ProjectList.astro';
+import ContactList from '../molecules/ContactList.astro';
 ---
 
 <Layout title="m1sk9's portfolio">
@@ -35,6 +36,11 @@ import ProjectList from '../molecules/ProjectList.astro';
     </div>
 
     <div>
+      <h2 class={css({ textStyle: 'h2' })}>Contact</h2>
+      <ContactList />
+    </div>
+
+    <div class={css({ mt: 10 })}>
       <h2 class={css({ textStyle: 'h2' })}>Projects</h2>
       <ProjectList />
     </div>

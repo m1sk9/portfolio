@@ -2,11 +2,12 @@
 import Layout from '../../organisms/Layout.astro';
 import lib from 'zenn-markdown-html';
 import { getAllPosts } from '../../lib/blog';
-
-import 'zenn-content-css';
 import { center } from '../../../styled-system/patterns';
 import { css } from '../../../styled-system/css';
 
+import 'zenn-content-css';
+
+// @ts-ignore ref: https://github.com/zenn-dev/zenn-editor/issues/432#issuecomment-1436233439
 const markdownToHtml = lib.default ? lib.default : lib;
 
 export interface Props {
@@ -35,7 +36,6 @@ export async function getStaticPaths() {
 }
 
 const { title, tags, date, body } = Astro.props;
-const slug = Astro.params.slug;
 const html = markdownToHtml(body, {
   embedOrigin: 'https://embed.zenn.studio'
 });

@@ -1,14 +1,18 @@
 ---
-layout: '../../../../organisms/BlogLayout.astro'
 title: 'Pulsate Project: メンバー募集'
-description: 'Pulsate チームによるメンバー募集のお知らせ'
-published: true
-published_at: '2024-03-24'
+tags: ['tech', 'pulsate']
+date: '2024-03-24'
 ---
 
 - [GitHub Org](https://link.pulsate.dev/github)
 - [Repository](https://github.com/pulsate-dev/pulsate)
 - [公式Discord](https://link.pulsate.dev/discord)
+
+:::message
+
+この記事の内容は古くなっています.
+
+:::
 
 ## プロジェクトの簡単な概要
 

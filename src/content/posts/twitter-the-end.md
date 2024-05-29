@@ -1,14 +1,14 @@
 ---
-layout: '../../../../organisms/BlogLayout.astro'
 title: 'さようなら、全ての Twitter ユーザー'
-description: 'さよならはまたであうためのおまじない'
-published: true
-published_at: '2024-05-23'
+tags: ['notice']
+date: '2024-05-23'
 ---
 
-![](/post-image/2024/f*ck-twitter/fuck-twitter-1.jpg)
+> **TL;DR: 移行先は "[@m1sk9@mstdn.maud.io](https://mstdn.maud.io/@m1sk9)" . このブログを読んだ知り合いはこれをフォローしておけば大丈夫です.**
 
-**TL;DR: 移行先は "[@m1sk9@mstdn.maud.io](https://mstdn.maud.io/@m1sk9)" . このブログを読んだ知り合いはこれをフォローしておけば大丈夫です.**
+**さよならはまたであうためのおまじない**
+
+![](/post-image/2024/f*ck-twitter/fuck-twitter-1.jpg)
 
 ---
 
@@ -28,7 +28,7 @@ published_at: '2024-05-23'
 
 今は普通にアクセス出来るようになっていますが, 最近の情勢を見ていると Twitter がお釈迦になる未来がそろそろ訪れそう. ということでアカウント移行を始めました.
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">Twitter がいつ死ぬか段々わからなくなってきたので Mastodon に随時移行します. 随時つながりがある人をフォローします. <a href="https://t.co/XBOd1Ro3gN">https://t.co/XBOd1Ro3gN</a></p>&mdash; Meru (@m1s2r8) <a href="https://twitter.com/m1s2r8/status/1792238906278346854?ref_src=twsrc%5Etfw">May 19, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+https://twitter.com/m1s2r8/status/1792238906278346854
 
 ## 移行先について
 

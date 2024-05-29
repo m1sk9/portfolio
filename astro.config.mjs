@@ -4,6 +4,12 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
+  // ブログレイアウトの再デザイン時に Content Collections を使用したため, ルーティングが変更されている. そのため, リダイレクトを設定する.
+  redirects: {
+    '/blog/posts/2024/about-pulsate-2024-03': '/blog/about-pulsate-2024-03',
+    '/blog/posts/2024/f*ck-twitter': '/blog/twitter-the-end',
+    '/contact': '/links'
+  },
   integrations: [
     pandacss(),
     icon({

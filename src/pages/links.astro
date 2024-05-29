@@ -12,20 +12,12 @@ interface LinksProps {
   iconId: string;
 }
 
-interface ContactProps {
-  link: LinksProps;
-  description: string;
-}
-
 const linksList: LinksProps[] = JSON.parse(
   await readFile('public/links-data.json', 'utf-8')
 );
-const contactList: ContactProps[] = JSON.parse(
-  await readFile('public/contact-data.json', 'utf-8')
-);
 ---
 
-<Layout title="Contact">
+<Layout title="Links">
   <body>
     <div
       class={center({
@@ -35,7 +27,7 @@ const contactList: ContactProps[] = JSON.parse(
         gap: 3
       })}
     >
-      <h1 class={css({ textStyle: 'h1' })}>Contact & Links</h1>
+      <h1 class={css({ textStyle: 'h1' })}>Links</h1>
     </div>
 
     <div
@@ -61,40 +53,6 @@ const contactList: ContactProps[] = JSON.parse(
               >
                 {item.id}
               </a>
-            </p>
-          );
-        })
-      }
-    </div>
-
-    <div
-      class={css({
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 2,
-        mt: 10
-      })}
-    >
-      {
-        contactList.map((item) => {
-          return (
-            <p
-              class={css({
-                textStyle: 'body'
-              })}
-            >
-              {item.link.title}:
-              <a
-                href={item.link.url}
-                class={css({
-                  textDecoration: 'underline'
-                })}
-              >
-                {item.link.id}
-              </a>
-              <p class={css({ textStyle: 'caption', color: 'gray' })}>
-                → {item.description}
-              </p>
             </p>
           );
         })

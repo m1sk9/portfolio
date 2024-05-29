@@ -1,8 +1,9 @@
 ---
 import { css } from '../../styled-system/css';
 import { grid } from '../../styled-system/patterns';
+import { getAllPosts } from '../lib/blog';
 
-const allBlogPosts = await Astro.glob('../pages/blog/**/*.md');
+const allBlogPosts = await getAllPosts();
 ---
 
 <div
@@ -13,44 +14,36 @@ const allBlogPosts = await Astro.glob('../pages/blog/**/*.md');
   })}
 >
   {
-    allBlogPosts
-      .sort(
-        (a, b) =>
-          new Date(b.frontmatter.date).getTime() -
-          new Date(a.frontmatter.date).getTime()
-      )
-      .filter((post) => post.frontmatter.published)
-      .slice(0, 4)
-      .map((post) => (
-        <article class={css({ border: '1px dashed gray', p: 3 })}>
-          <a href={post.url}>
-            <p
-              class={css({
-                fontSize: 12,
-                textStyle: 'body',
-                color: 'gray'
-              })}
-            >
-              {post.frontmatter.published_at}
-            </p>
-            <p
-              class={css({
-                fontSize: 16,
-                textStyle: 'body'
-              })}
-            >
-              {post.frontmatter.title}
-            </p>
-            <p
-              class={css({
-                textStyle: 'caption',
-                color: 'gray'
-              })}
-            >
-              {post.frontmatter.description}
-            </p>
-          </a>
-        </article>
-      ))
+    allBlogPosts.slice(0, 4).map((post) => (
+      <article class={css({ border: '1px dashed gray', p: 3 })}>
+        <a href={`/blog/${post.slug}`}>
+          <p
+            class={css({
+              fontSize: 12,
+              textStyle: 'body',
+              color: 'gray'
+            })}
+          >
+            {post.date}
+          </p>
+          <p
+            class={css({
+              fontSize: 16,
+              textStyle: 'body'
+            })}
+          >
+            {post.title}
+          </p>
+          <p
+            class={css({
+              textStyle: 'caption',
+              color: 'gray'
+            })}
+          >
+            {post.tags.map((item) => `#${item} `)}
+          </p>
+        </a>
+      </article>
+    ))
   }
 </div>

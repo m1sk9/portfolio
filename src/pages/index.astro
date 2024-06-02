@@ -2,10 +2,23 @@
 import Layout from '../organisms/Layout.astro';
 import { css } from '../../styled-system/css';
 import { center } from '../../styled-system/patterns';
+import { readFile } from 'fs/promises';
 
 import BlogPostList from '../molecules/BlogPostList.astro';
 import ProjectList from '../molecules/ProjectList.astro';
 import ContactList from '../molecules/ContactList.astro';
+
+interface LyricsProps {
+  songTitle: string;
+  artist: string;
+  lyrics: string;
+  source: string;
+}
+
+const lyricsData: LyricsProps[] = JSON.parse(
+  await readFile('public/lyrics.json', 'utf-8')
+);
+const lyric = lyricsData[Math.floor(Math.random() * lyricsData.length)];
 ---
 
 <Layout title="m1sk9's portfolio">
@@ -48,6 +61,30 @@ import ContactList from '../molecules/ContactList.astro';
     <div class={css({ mt: 10 })}>
       <h2 class={css({ textStyle: 'h2' })}>Latest Articles</h2>
       <BlogPostList />
+    </div>
+
+    <div
+      class={css({
+        mt: 20,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
+      })}
+    >
+      {
+        (
+          <>
+            <p class={css({ fontSize: '15px' })}>{lyric.lyrics}</p>
+            <a
+              href={lyric.source}
+              class={css({ textStyle: 'caption', color: 'gray', mt: 2 })}
+            >
+              {lyric.songTitle} - {lyric.artist}
+            </a>
+          </>
+        )
+      }
     </div>
   </body>
 </Layout>

@@ -1,6 +1,6 @@
 ---
 import { css } from '../../styled-system/css';
-import { center, grid } from '../../styled-system/patterns';
+import { center } from '../../styled-system/patterns';
 import { readFile } from 'fs/promises';
 
 import Layout from '../organisms/Layout.astro';
@@ -13,7 +13,7 @@ interface LinksProps {
 }
 
 const linksList: LinksProps[] = JSON.parse(
-  await readFile('public/links-data.json', 'utf-8')
+  await readFile('public/data/links-data.json', 'utf-8')
 );
 ---
 
@@ -31,9 +31,11 @@ const linksList: LinksProps[] = JSON.parse(
     </div>
 
     <div
-      class={grid({
-        gridTemplateColumns: { base: '1fr', md: '1fr 1fr' },
-        mt: 3
+      class={css({
+        display: 'flex',
+        flexDirection: 'column',
+        mt: 3,
+        gap: 3
       })}
     >
       {

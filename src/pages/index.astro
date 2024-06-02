@@ -1,6 +1,7 @@
 ---
 import Layout from '../organisms/Layout.astro';
 import { css } from '../../styled-system/css';
+import { BodyLayout } from '../lib/layout';
 import { center } from '../../styled-system/patterns';
 import { readFile } from 'fs/promises';
 
@@ -40,14 +41,16 @@ const lyric = lyricsData[Math.floor(Math.random() * lyricsData.length)];
       <h1 class={css({ textStyle: 'h1', mt: 2 })}>m1sk9</h1>
     </div>
 
-    <div class={css({ mt: 10 })}>
-      <h2 class={css({ textStyle: 'h2' })}>Projects</h2>
-      <ProjectList />
-    </div>
+    <div class={BodyLayout()}>
+      <div>
+        <h2 class={css({ textStyle: 'h2' })}>Projects</h2>
+        <ProjectList />
+      </div>
 
-    <div class={css({ mt: 10 })}>
-      <h2 class={css({ textStyle: 'h2' })}>Latest Articles</h2>
-      <BlogPostList />
+      <div>
+        <h2 class={css({ textStyle: 'h2' })}>Latest Articles</h2>
+        <BlogPostList />
+      </div>
     </div>
 
     <div

@@ -58,5 +58,10 @@
     "title": "Email (受信専用)",
     "id": "me@m1sk9.dev",
     "url": "mailto:me@m1sk9.dev"
+  },
+  {
+    "title": "歌詞Roll 全件表示",
+    "id": "こちら",
+    "url": "/data/lyrics.json"
   }
 ]

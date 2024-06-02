@@ -3,57 +3,42 @@ import { defineConfig, defineTextStyles } from '@pandacss/dev';
 export const textStyles = defineTextStyles({
   body: {
     value: {
-      fontFamily: 'LINE Seed',
-      fontWeight: 500,
-      fontSize: '18px',
+      fontFamily: 'MPLUS1p',
+      fontSize: '17px',
       lineHeight: '26px',
-      letterSpacing: 'normal',
-      textDecoration: 'None',
-      textTransform: 'None'
+      letterSpacing: 'normal'
     }
   },
   caption: {
     value: {
-      fontFamily: 'LINE Seed',
-      fontWeight: 500,
+      fontFamily: 'MPLUS1p',
       fontSize: '14px',
       lineHeight: '26px',
-      letterSpacing: 'normal',
-      textDecoration: 'None',
-      textTransform: 'None'
+      letterSpacing: 'normal'
     }
   },
   h1: {
     value: {
-      fontFamily: 'LINE Seed',
-      fontWeight: 700,
+      fontFamily: 'MPLUS1p',
       fontSize: '30px',
       lineHeight: '40px',
-      letterSpacing: '-0.5px',
-      textDecoration: 'None',
-      textTransform: 'None'
+      letterSpacing: '-0.5px'
     }
   },
   h2: {
     value: {
-      fontFamily: 'LINE Seed',
-      fontWeight: 700,
+      fontFamily: 'MPLUS1p',
       fontSize: '24px',
       lineHeight: '32px',
-      letterSpacing: '-0.5px',
-      textDecoration: 'None',
-      textTransform: 'None'
+      letterSpacing: '-0.5px'
     }
   },
   h3: {
     value: {
-      fontFamily: 'LINE Seed',
-      fontWeight: 700,
+      fontFamily: 'MPLUS1p',
       fontSize: '20px',
       lineHeight: '28px',
-      letterSpacing: '-0.5px',
-      textDecoration: 'None',
-      textTransform: 'None'
+      letterSpacing: '-0.5px'
     }
   }
 });

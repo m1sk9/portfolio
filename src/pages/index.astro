@@ -16,7 +16,7 @@ interface LyricsProps {
 }
 
 const lyricsData: LyricsProps[] = JSON.parse(
-  await readFile('public/lyrics.json', 'utf-8')
+  await readFile('public/data/lyrics.json', 'utf-8')
 );
 const lyric = lyricsData[Math.floor(Math.random() * lyricsData.length)];
 ---

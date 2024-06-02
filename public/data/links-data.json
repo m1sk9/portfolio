@@ -10,6 +10,31 @@
     "url": "https://zenn.dev/m1sk9"
   },
   {
+    "title": "Discord",
+    "id": "m1sk9",
+    "url": "https://discord.com/users/586824421470109716/"
+  },
+  {
+    "title": "Mastodon (末代)",
+    "id": "@m1sk9@mstdn.maud.io",
+    "url": "https://mstdn.maud.io/@m1sk9"
+  },
+  {
+    "title": "Misskey (Growthers)",
+    "id": "@meru@mi.growthers.dev",
+    "url": "https://mi.growthers.dev/@meru"
+  },
+  {
+    "title": "Misskey (りんごぱい)",
+    "id": "@m1sk9@misskey.04.si",
+    "url": "https://misskey.04.si/@m1sk9"
+  },
+  {
+    "title": "Bluesky",
+    "id": "@m1sk9.dev",
+    "url": "https://bsky.app/profile/m1sk9.dev"
+  },
+  {
     "title": "reddit",
     "id": "u/m1sk9",
     "url": "https://www.reddit.com/user/m1sk9/"
@@ -28,5 +53,10 @@
     "title": "Steam",
     "id": "m1sk9",
     "url": "https://steamcommunity.com/id/m1sk9/"
+  },
+  {
+    "title": "Email (受信専用)",
+    "id": "me@m1sk9.dev",
+    "url": "mailto:me@m1sk9.dev"
   }
 ]

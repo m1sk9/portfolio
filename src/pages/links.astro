@@ -31,9 +31,11 @@ const linksList: LinksProps[] = JSON.parse(
     </div>
 
     <div
-      class={grid({
-        gridTemplateColumns: { base: '1fr', md: '1fr 1fr' },
-        mt: 3
+      class={css({
+        display: 'flex',
+        flexDirection: 'column',
+        mt: 3,
+        gap: 3
       })}
     >
       {

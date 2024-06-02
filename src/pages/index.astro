@@ -6,7 +6,6 @@ import { readFile } from 'fs/promises';
 
 import BlogPostList from '../molecules/BlogPostList.astro';
 import ProjectList from '../molecules/ProjectList.astro';
-import ContactList from '../molecules/ContactList.astro';
 
 interface LyricsProps {
   songTitle: string;
@@ -46,11 +45,6 @@ const lyric = lyricsData[Math.floor(Math.random() * lyricsData.length)];
           statically typed languages. I often write TypeScript and Rust.
         </p>
       </div>
-    </div>
-
-    <div>
-      <h2 class={css({ textStyle: 'h2' })}>Contact</h2>
-      <ContactList />
     </div>
 
     <div class={css({ mt: 10 })}>

@@ -103,18 +103,23 @@ interface Props {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        mt: 20,
         padding: '2rem'
       })}
     >
-      <p class={css({ textStyle: 'body' })}>&copy; 2024 m1sk9</p>
-    </footer>
+      <div class={css({ borderTop: '1px solid gray', height: '1.5rem' })}>
+        <a
+          href="https://github.com/m1sk9/portfolio"
+          class={css({ textStyle: 'caption' })}
+          >&copy; 2024 m1sk9
+        </a>
+      </div>
 
-    <style is:global>
-      @font-face {
-        font-family: 'LINE Seed';
-        src: url('/fonts/LINESeedJP_OTF_Rg.woff') format('woff');
-      }
-    </style>
+      <style is:global>
+        @font-face {
+          font-family: 'LINE Seed';
+          src: url('/fonts/LINESeedJP_OTF_Rg.woff') format('woff');
+        }
+      </style>
+    </footer>
   </body>
 </html>

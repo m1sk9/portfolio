@@ -65,7 +65,9 @@ const lyric = lyricsData[Math.floor(Math.random() * lyricsData.length)];
       {
         (
           <>
-            <p class={css({ fontSize: '15px' })}>{lyric.lyrics}</p>
+            <p class={css({ textStyle: 'caption', fontSize: '15px' })}>
+              {lyric.lyrics}
+            </p>
             <a
               href={lyric.source}
               class={css({ textStyle: 'caption', color: 'gray', mt: 2 })}

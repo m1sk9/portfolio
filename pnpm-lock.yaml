@@ -22,7 +22,7 @@ dependencies:
     version: 0.33.4
   zenn-content-css:
     specifier: ^0.1.153
-    version: 0.1.153
+    version: 0.1.154
   zenn-markdown-html:
     specifier: ^0.1.153
     version: 0.1.153(@types/markdown-it@14.1.1)
@@ -6106,8 +6106,8 @@ packages:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
     engines: {node: '>=12.20'}
 
-  /zenn-content-css@0.1.153:
-    resolution: {integrity: sha512-dixZekfHXx3I6r5HhoQi1f7NqhKr5a/ubh8HochO5lkrHCXG6a446eZ1+j9zeJxROfDjCkulB+nuDJo4FoQ8Rw==}
+  /zenn-content-css@0.1.154:
+    resolution: {integrity: sha512-tYHV4OMftCDJZjY28Ajb0kjZwA23cr1uOHLorgAOtO6SP2NWlNn1Liz4vICBEAhFgVwjxI2chkPxVukS13Kk0w==}
     dev: false
 
   /zenn-markdown-html@0.1.153(@types/markdown-it@14.1.1):

@@ -25,7 +25,7 @@ dependencies:
     version: 0.1.154
   zenn-markdown-html:
     specifier: ^0.1.153
-    version: 0.1.153(@types/markdown-it@14.1.1)
+    version: 0.1.154(@types/markdown-it@14.1.1)
 
 devDependencies:
   '@pandacss/astro':
@@ -6110,8 +6110,8 @@ packages:
     resolution: {integrity: sha512-tYHV4OMftCDJZjY28Ajb0kjZwA23cr1uOHLorgAOtO6SP2NWlNn1Liz4vICBEAhFgVwjxI2chkPxVukS13Kk0w==}
     dev: false
 
-  /zenn-markdown-html@0.1.153(@types/markdown-it@14.1.1):
-    resolution: {integrity: sha512-9fzR1mrkb9Xz4FQplHucLPc3BKQriBNjXxBfODfBmO58cNRlvoNg4QvGp1nkhCLRfjiKxDXy7x09ccXSBdE+xg==}
+  /zenn-markdown-html@0.1.154(@types/markdown-it@14.1.1):
+    resolution: {integrity: sha512-zaEUKb4gwl7XPunkt/7buyJzQePveNx2q+EEhSzbuSnc016/No81l/ZSdtK8k+9r65RZqSuOAwFXJer9i7c2Ww==}
     dependencies:
       '@steelydylan/markdown-it-imsize': 1.0.2
       cheerio: 1.0.0-rc.12

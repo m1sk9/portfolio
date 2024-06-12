@@ -1,5 +1,6 @@
 ---
 title: 'さようなら、全ての Twitter ユーザー'
+description: 'イーロン・マスクSNS'
 tags: ['notice']
 date: '2024-05-23'
 ---

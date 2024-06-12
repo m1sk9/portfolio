@@ -1,5 +1,6 @@
 ---
 title: 'Firefox Nightly 上での Misskey の UI アイコンが壊れる'
+description: 'Firefox Nightly 限定の不具合'
 tags: ['tech', 'misskey']
 date: '2024-05-30'
 ---

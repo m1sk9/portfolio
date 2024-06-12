@@ -1,5 +1,6 @@
 ---
 title: 'Firefox (macOS) のショートカット (よく使うやつだけ)'
+description: 'よく使う Firefox のショートカットだけ'
 tags: ['tech', 'firefox']
 date: '2024-06-05'
 ---

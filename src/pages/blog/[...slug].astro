@@ -12,6 +12,7 @@ const markdownToHtml = lib.default ? lib.default : lib;
 
 export interface Props {
   title: string;
+  description: string;
   emoji: string;
   tags: string[];
   date: string;
@@ -35,13 +36,13 @@ export async function getStaticPaths() {
   });
 }
 
-const { title, tags, date, body } = Astro.props;
+const { title, description, tags, date, body } = Astro.props;
 const html = markdownToHtml(body, {
   embedOrigin: 'https://embed.zenn.studio'
 });
 ---
 
-<Layout title={title}>
+<Layout title={title} description={description}>
   <body>
     <div
       class={center({

@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 export interface Blog {
   // BlogPostCollection
   title: string;
+  description: string;
   tags: string[];
   date: string;
   // Additional properties

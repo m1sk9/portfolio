@@ -1,21 +1,38 @@
+import react from '@astrojs/react';
+import vercel from '@astrojs/vercel/serverless';
 import pandacss from '@pandacss/astro';
 import icon from 'astro-icon';
 import { defineConfig } from 'astro/config';
 
-import react from "@astrojs/react";
-
 // https://astro.build/config
 export default defineConfig({
   site: 'https://m1sk9.dev',
+  output: 'server',
+  adapter: vercel({
+    imageService: true,
+    isr: {
+      expiration: 60 * 60 * 24
+    }
+  }),
   // ブログレイアウトの再デザイン時に Content Collections を使用したため, ルーティングが変更されている. そのため, リダイレクトを設定する.
   redirects: {
     '/blog/posts/2024/about-pulsate-2024-03': '/blog/about-pulsate-2024-03',
     '/blog/posts/2024/f*ck-twitter': '/blog/twitter-the-end',
     '/contact': '/links'
   },
-  integrations: [pandacss(), icon({
-    include: {
-      ri: ['home-4-line', 'github-line', 'mastodon-line', 'quill-pen-fill', 'link']
-    }
-  }), react()]
+  integrations: [
+    pandacss(),
+    icon({
+      include: {
+        ri: [
+          'home-4-line',
+          'github-line',
+          'mastodon-line',
+          'quill-pen-fill',
+          'link'
+        ]
+      }
+    }),
+    react()
+  ]
 });

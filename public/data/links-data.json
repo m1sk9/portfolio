@@ -42,7 +42,7 @@
   {
     "title": "last.fm",
     "id": "m1sk9",
-    "url": "hhttps://www.last.fm/user/m1sk9"
+    "url": "https://www.last.fm/user/m1sk9"
   },
   {
     "title": "Steam",
@@ -53,10 +53,5 @@
     "title": "Email (受信専用)",
     "id": "me@m1sk9.dev",
     "url": "mailto:me@m1sk9.dev"
-  },
-  {
-    "title": "歌詞Roll 全件表示",
-    "id": "こちら",
-    "url": "/data/lyrics.json"
   }
 ]

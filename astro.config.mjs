@@ -2,6 +2,8 @@ import pandacss from '@pandacss/astro';
 import icon from 'astro-icon';
 import { defineConfig } from 'astro/config';
 
+import react from "@astrojs/react";
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://m1sk9.dev',
@@ -11,18 +13,9 @@ export default defineConfig({
     '/blog/posts/2024/f*ck-twitter': '/blog/twitter-the-end',
     '/contact': '/links'
   },
-  integrations: [
-    pandacss(),
-    icon({
-      include: {
-        ri: [
-          'home-4-line',
-          'github-line',
-          'mastodon-line',
-          'quill-pen-fill',
-          'link'
-        ]
-      }
-    })
-  ]
+  integrations: [pandacss(), icon({
+    include: {
+      ri: ['home-4-line', 'github-line', 'mastodon-line', 'quill-pen-fill', 'link']
+    }
+  }), react()]
 });

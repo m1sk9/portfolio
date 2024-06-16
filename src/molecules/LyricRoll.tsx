@@ -34,12 +34,19 @@ export const LyricRoll = () => {
       <p className={css({ textStyle: 'caption', fontSize: '15px' })}>
         {lyricData?.lyrics}
       </p>
-      <a
-        href={lyricData?.source}
-        className={css({ textStyle: 'caption', color: 'gray', mt: 2 })}
-      >
-        {lyricData?.songTitle} - {lyricData?.artist}
-      </a>
+      {lyricData?.source ? (
+        <a
+          href={lyricData?.source}
+          target="_blank"
+          className={css({ textStyle: 'caption', color: 'gray', mt: 2 })}
+        >
+          {lyricData?.songTitle} - {lyricData?.artist}
+        </a>
+      ) : (
+        <p className={css({ textStyle: 'caption', color: 'gray', mt: 2 })}>
+          {lyricData?.songTitle} - {lyricData?.artist}
+        </p>
+      )}
     </div>
   );
 };

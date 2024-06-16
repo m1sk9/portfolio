@@ -3,7 +3,7 @@ import Layout from '../organisms/Layout.astro';
 import { css } from '../../styled-system/css';
 import { BodyLayout, ItemLayout } from '../style/recipes/layout.css';
 
-import ProjectList from '../molecules/ProjectList.astro';
+import { ProjectList } from '../molecules/ProjectList';
 import { LyricRoll } from '../molecules/LyricRoll.tsx';
 ---
 
@@ -31,7 +31,7 @@ import { LyricRoll } from '../molecules/LyricRoll.tsx';
 
       <div>
         <h2 class={css({ textStyle: 'h2' })}>Projects</h2>
-        <ProjectList />
+        <ProjectList client:load />
       </div>
     </div>
 

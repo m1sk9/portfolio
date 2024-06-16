@@ -1,6 +1,8 @@
 ---
 import { css } from '../../styled-system/css';
 import { grid } from '../../styled-system/patterns';
+import { Link } from '../style/recipes/link.css';
+
 import { getAllPosts } from '../lib/blog';
 
 const allBlogPosts = await getAllPosts();
@@ -16,16 +18,16 @@ const allBlogPosts = await getAllPosts();
   {
     allBlogPosts.slice(0, 4).map((post) => (
       <article class={css({ border: '1px dashed gray', p: 3 })}>
-        <a href={`/blog/${post.slug}`}>
-          <p
-            class={css({
-              fontSize: 12,
-              textStyle: 'body',
-              color: 'gray'
-            })}
-          >
-            {post.date}
-          </p>
+        <p
+          class={css({
+            fontSize: 12,
+            textStyle: 'body',
+            color: 'gray'
+          })}
+        >
+          {post.date}
+        </p>
+        <a href={`/blog/${post.slug}`} class={Link({})}>
           <p
             class={css({
               fontSize: 16,
@@ -34,15 +36,15 @@ const allBlogPosts = await getAllPosts();
           >
             {post.title}
           </p>
-          <p
-            class={css({
-              textStyle: 'caption',
-              color: 'gray'
-            })}
-          >
-            {post.tags.map((item) => `#${item} `)}
-          </p>
         </a>
+        <p
+          class={css({
+            textStyle: 'caption',
+            color: 'gray'
+          })}
+        >
+          {post.tags.map((item) => `#${item} `)}
+        </p>
       </article>
     ))
   }

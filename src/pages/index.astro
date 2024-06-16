@@ -3,6 +3,7 @@ import Layout from '../organisms/Layout.astro';
 import { css } from '../../styled-system/css';
 import { BodyLayout } from '../lib/layout';
 import { center } from '../../styled-system/patterns';
+import { Link } from '../style/recipes/link.css';
 
 import BlogPostList from '../molecules/BlogPostList.astro';
 import ProjectList from '../molecules/ProjectList.astro';
@@ -38,9 +39,6 @@ import { LyricRoll } from '../molecules/LyricRoll.tsx';
       <div>
         <h2 class={css({ textStyle: 'h2' })}>Latest Articles</h2>
         <BlogPostList />
-        <a href="/blog" class={css({ textStyle: 'caption', mt: 2 })}>
-          すべての記事 →
-        </a>
       </div>
     </div>
 

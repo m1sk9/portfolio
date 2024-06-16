@@ -1,11 +1,9 @@
 ---
 import Layout from '../organisms/Layout.astro';
 import { css } from '../../styled-system/css';
-import { BodyLayout } from '../lib/layout';
-import { ItemLayout } from '../style/recipes/layout.css';
+import { BodyLayout, ItemLayout } from '../style/recipes/layout.css';
 
-import BlogPostList from '../molecules/BlogPostList.astro';
-import ProjectList from '../molecules/ProjectList.astro';
+import { ProjectList } from '../molecules/ProjectList';
 import { LyricRoll } from '../molecules/LyricRoll.tsx';
 ---
 
@@ -19,18 +17,21 @@ import { LyricRoll } from '../molecules/LyricRoll.tsx';
         height="100"
         alt="m1sk9 のアイコン"
       />
-      <h1 class={css({ textStyle: 'h1', mt: 2 })}>m1sk9</h1>
     </div>
 
     <div class={BodyLayout()}>
-      <div>
-        <h2 class={css({ textStyle: 'h2' })}>Projects</h2>
-        <ProjectList />
+      <div class={css({ textStyle: 'body' })}>
+        <p>Hi. I'm Sho Sakuma. Also known as m1sk9.</p>
+        <p>
+          I'm a university student studying computer science in Japan. Likes
+          photography and fashion. Of course I like sleeping and eating, but
+          what I like best is listening to music.
+        </p>
       </div>
 
       <div>
-        <h2 class={css({ textStyle: 'h2' })}>Latest Articles</h2>
-        <BlogPostList />
+        <h2 class={css({ textStyle: 'h2' })}>Projects</h2>
+        <ProjectList client:load />
       </div>
     </div>
 

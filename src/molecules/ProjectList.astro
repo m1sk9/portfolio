@@ -7,6 +7,7 @@
 import { readFile } from 'fs/promises';
 import { grid } from '../../styled-system/patterns';
 import { css } from '../../styled-system/css';
+import { Link } from '../style/recipes/link.css';
 
 interface ProjectProps {
   name: string;
@@ -33,13 +34,13 @@ const allProjects: ProjectProps[] = JSON.parse(
           <article class={css({ border: '1px dashed gray', p: 3 })}>
             <a
               href={new URL(project.repository, 'https://github.com').href}
-              class={css({ textStyle: 'body' })}
+              class={Link({ textStyle: 'body' })}
             >
               {project.name}
-              <p class={css({ textStyle: 'caption', color: 'gray' })}>
-                {project.description}
-              </p>
             </a>
+            <p class={css({ textStyle: 'caption', color: 'gray' })}>
+              {project.description}
+            </p>
           </article>
         );
       })

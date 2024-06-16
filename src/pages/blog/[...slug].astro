@@ -4,6 +4,7 @@ import lib from 'zenn-markdown-html';
 import { getAllPosts } from '../../content/blog';
 import { center } from '../../../styled-system/patterns';
 import { css } from '../../../styled-system/css';
+import { Link } from '../../style/recipes/link.css';
 
 import 'zenn-content-css';
 
@@ -37,7 +38,7 @@ export async function getStaticPaths() {
 }
 
 const { title, description, tags, date, body } = Astro.props;
-const slag = Astro.params.slug;
+const slug = Astro.params.slug;
 const html = markdownToHtml(body);
 ---
 
@@ -65,12 +66,28 @@ const html = markdownToHtml(body);
     <div class="znc">
       <Fragment class="post-body" set:html={html} />
     </div>
+
+    <div
+      class={css({
+        mt: 5,
+        display: 'flex',
+        justifyContent: 'center'
+      })}
+    >
+      <a
+        href={`https://github.com/m1sk9/portfolio/edit/main/src/content/posts/${slug}.md`}
+        target="_blank"
+        class={Link({ textStyle: 'caption' })}
+      >
+        GitHub で編集を提案する ↗
+      </a>
+    </div>
+    <style>
+      .znc {
+        font-family: 'LINE Seed';
+        font-size: 16px;
+        color: black;
+      }
+    </style>
   </body>
-  <style>
-    .znc {
-      font-family: 'LINE Seed';
-      font-size: 16px;
-      color: black;
-    }
-  </style>
 </Layout>

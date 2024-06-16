@@ -1,7 +1,9 @@
 ---
 title: 'Firefox Nightly 上での Misskey の UI アイコンが壊れる'
+description: 'Firefox Nightly でのみ発生する Misskey の不具合'
 tags: ['tech', 'misskey']
 date: '2024-05-30'
+published: true
 ---
 
 Firefox Nightly では Misskey 上の UI アイコン表示が壊れます.

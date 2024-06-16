@@ -1,7 +1,7 @@
 ---
 import { css } from '../../styled-system/css';
-import { center } from '../../styled-system/patterns';
 import { Link } from '../style/recipes/link.css';
+import { ItemLayout } from '../style/recipes/layout.css';
 
 import { readFile } from 'fs/promises';
 
@@ -21,14 +21,7 @@ const linksList: LinksProps[] = JSON.parse(
 
 <Layout title="Links">
   <body>
-    <div
-      class={center({
-        flexDirection: 'column',
-        h: 'full',
-        mb: 10,
-        gap: 3
-      })}
-    >
+    <div class={ItemLayout({})}>
       <h1 class={css({ textStyle: 'h1' })}>Links</h1>
     </div>
 

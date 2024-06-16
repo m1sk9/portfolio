@@ -2,8 +2,7 @@
 import Layout from '../organisms/Layout.astro';
 import { css } from '../../styled-system/css';
 import { BodyLayout } from '../lib/layout';
-import { center } from '../../styled-system/patterns';
-import { Link } from '../style/recipes/link.css';
+import { ItemLayout } from '../style/recipes/layout.css';
 
 import BlogPostList from '../molecules/BlogPostList.astro';
 import ProjectList from '../molecules/ProjectList.astro';
@@ -12,14 +11,7 @@ import { LyricRoll } from '../molecules/LyricRoll.tsx';
 
 <Layout title="m1sk9's portfolio">
   <body>
-    <div
-      class={center({
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        mb: 10
-      })}
-    >
+    <div class={ItemLayout({ type: 'centerAlign' })}>
       <img
         class={css({ borderRadius: 50 })}
         src="./icon.jpg"

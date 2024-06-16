@@ -52,10 +52,8 @@ const html = markdownToHtml(body, {
       })}
     >
       <h1 class={css({ textStyle: 'h1' })}>{title}</h1>
-      <p class={css({ textStyle: 'body', fontSize: '16px', color: 'gray' })}>
-        {tags.map((item) => `#${item} `)}
-      </p>
-      <p class={css({ textStyle: 'body', fontSize: '16px', color: 'gray' })}>
+      <p class={css({ textStyle: 'caption' })}>
+        {tags.map((item) => `#${item} `)} -
         {
           new Intl.DateTimeFormat('en-US', {
             dateStyle: 'long'

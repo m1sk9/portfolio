@@ -3,8 +3,10 @@ import { getCollection } from 'astro:content';
 export interface Blog {
   // BlogPostCollection
   title: string;
+  description: string;
   tags: string[];
   date: string;
+  published: boolean;
   // Additional properties
   slug: string;
   body: string;
@@ -16,6 +18,7 @@ export async function getAllPosts(): Promise<Blog[]> {
     posts
       // @ts-ignore
       .map((blog) => ({ ...blog.data, slug: blog.slug, body: blog.body }))
+      .filter((blog) => blog.published)
       // @ts-ignore
       .sort((a, z) => new Date(z.date).getTime() - new Date(a.date).getTime())
   );

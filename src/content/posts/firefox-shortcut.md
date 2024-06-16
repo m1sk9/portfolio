@@ -1,7 +1,9 @@
 ---
 title: 'Firefox (macOS) のショートカット (よく使うやつだけ)'
+description: 'Firefox (macOS) のショートカット (よく使うやつだけ)'
 tags: ['tech', 'firefox']
 date: '2024-06-05'
+published: false
 ---
 
 `tech` なのか? 違うのでは?

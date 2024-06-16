@@ -1,7 +1,9 @@
 ---
 title: 'さようなら、全ての Twitter ユーザー'
+description: 'さようなら、全ての Twitter ユーザー'
 tags: ['notice']
 date: '2024-05-23'
+published: false
 ---
 
 > **TL;DR: 移行先は "[@m1sk9@mstdn.maud.io](https://mstdn.maud.io/@m1sk9)" . このブログを読んだ知り合いはこれをフォローしておけば大丈夫です.**

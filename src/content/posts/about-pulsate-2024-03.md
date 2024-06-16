@@ -1,7 +1,9 @@
 ---
 title: 'Pulsate Project: メンバー募集'
+description: 'Pulsate Project: メンバー募集'
 tags: ['tech', 'pulsate']
 date: '2024-03-24'
+published: false
 ---
 
 - [GitHub Org](https://link.pulsate.dev/github)
@@ -109,5 +111,7 @@ Pulsate Project は, 2023年に始まった分散型SNSのプロジェクトで�
 開発に興味を持っていただけた方はぜひご連絡ください. チームへの参加をお待ちしております.
 
 [^1]: https://twitter.com/4649niya/status/1703979150833545349
+
 [^2]: https://x.com/found136/status/1703916743251677475?s=20
+
 [^3]: https://github.com/misskey-dev/misskey/issues/11154

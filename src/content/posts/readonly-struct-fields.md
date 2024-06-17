@@ -10,7 +10,7 @@ published: true
 
 [dtolnay/readonly: Struct fields that are made read-only accessible to other modules](https://github.com/dtolnay/readonly)
 
-dtolnay 氏と言えばみんな大好き serde や anyhow の作者ですが, 彼は GitHub のリポジトリが Rust だけで構成されているほどの Rust 狂信者で[^1] 色んなライブラリを公開してくれています. readonly はそんなリポジトリ欄を見ている中で出会ったライブラリです. serde などが有名なのでこれらのライブラリはあまり記事などでは見ないので今回紹介したいと思います.
+dtolnay 氏と言えばみんな大好き serde や anyhow の作者ですが, 彼は GitHub のリポジトリが Rust だけで構成されているほどの Rust 狂信者で[^1] 色んなライブラリを公開してくれています. readonly はそんなリポジトリ欄を見ている中で出会ったライブラリです. serde などが有名過ぎてこれらのライブラリはあまり記事などでは見ないので今回紹介したいと思います.
 
 - [使い方](#使い方)
   - [値だけを読み取り専用にする](#値だけを読み取り専用にする)

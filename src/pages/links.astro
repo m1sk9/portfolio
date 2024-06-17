@@ -1,7 +1,7 @@
 ---
 import { css } from '../../styled-system/css';
 import { Link } from '../style/recipes/link.css';
-import { ItemLayout } from '../style/recipes/layout.css';
+import { BodyLayout, ItemLayout } from '../style/recipes/layout.css';
 
 import { readFile } from 'fs/promises';
 
@@ -25,36 +25,63 @@ const linksList: LinksProps[] = JSON.parse(
       <h1 class={css({ textStyle: 'h1' })}>Links</h1>
     </div>
 
-    <div
-      class={css({
-        display: 'flex',
-        flexDirection: 'column',
-        mt: 3,
-        gap: 3
-      })}
-    >
-      {
-        linksList.map((item) => {
-          return (
-            <p
-              class={css({
-                textStyle: 'body'
-              })}
-            >
-              {item.title}:
-              <a href={item.url} class={Link({})}>
-                {item.id}
-              </a>
-            </p>
-          );
-        })
-      }
-    </div>
+    <div class={BodyLayout({})}>
+      <div
+        class={css({
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 3
+        })}
+      >
+        {
+          linksList.map((item) => {
+            return (
+              <p
+                class={css({
+                  textStyle: 'body'
+                })}
+              >
+                {item.title}:
+                <a href={item.url} class={Link({})}>
+                  {item.id}
+                </a>
+              </p>
+            );
+          })
+        }
+      </div>
 
-    <div class={css({ mt: 10 })}>
-      <a href="https://yude.jp">
-        <img src="https://www.yude.jp/banner_new.png" , alt="yude.jp banner" />
-      </a>
+      <div>
+        <h2 class={css({ textStyle: 'h2' })}>GPG Keys</h2>
+        <div class={css({ textStyle: 'body' })}>
+          <p>Use for sharing secure files, for example.</p>
+          <p>
+            Fingerprint of master key:
+            <code>ABB3 904C 7263 155D 9F5C 34A3 198F 1B4D 8D77 678F</code>
+          </p>
+          <br />
+          <p>
+            <a
+              href="m1sk9-pub.asc"
+              class={css({ textDecoration: 'underline' })}
+            >
+              You can download it directly from this site
+            </a>or obtain it by executing the following command:
+          </p>
+          <code>gpg --fetch-keys https://m1sk9.dev/pub.asc</code>
+        </div>
+      </div>
+
+      <hr />
+      <div>
+        <a href="https://yude.jp">
+          <img
+            src="https://www.yude.jp/banner_new.png"
+            ,
+            alt="yude.jp banner"
+          />
+        </a>
+      </div>
     </div>
   </body>
 </Layout>

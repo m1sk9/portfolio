@@ -1,0 +1,16 @@
+#user_profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+#user_profile img {
+    border-radius: 50%;
+}
+
+#user_profile nav {
+    display: flex;
+    gap: 1rem;
+}

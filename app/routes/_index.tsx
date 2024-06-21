@@ -1,7 +1,9 @@
+import Profile from "../components/organisms/Profile";
+
 export default function IndexPage() {
   return (
-    <div>
-      <h1>Hello, world!</h1>
-    </div>
+    <main>
+      <Profile />
+    </main>
   );
 }

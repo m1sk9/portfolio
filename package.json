@@ -17,7 +17,8 @@
     "format": "biome format --write .",
     "lint": "biome lint ./app",
     "lint:fix": "biome lint --write ./app",
-    "check": "biome check --write ./app",
+    "check": "biome check ./app",
+    "check:fix": "biome check --write ./app",
     "typecheck": "tsc --noEmit",
     "postinstall": "lefthook install"
   },

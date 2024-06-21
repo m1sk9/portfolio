@@ -10,19 +10,9 @@
     "url": "https://discord.com/users/586824421470109716/"
   },
   {
-    "title": "Mastodon (末代)",
+    "title": "Mastodon",
     "id": "@m1sk9@mstdn.maud.io",
     "url": "https://mstdn.maud.io/@m1sk9"
-  },
-  {
-    "title": "Misskey (Growthers)",
-    "id": "@meru@mi.growthers.dev",
-    "url": "https://mi.growthers.dev/@meru"
-  },
-  {
-    "title": "Misskey (りんごぱい)",
-    "id": "@m1sk9@misskey.04.si",
-    "url": "https://misskey.04.si/@m1sk9"
   },
   {
     "title": "Bluesky",
@@ -50,7 +40,7 @@
     "url": "https://steamcommunity.com/id/m1sk9/"
   },
   {
-    "title": "Email (受信専用)",
+    "title": "Email (receive only)",
     "id": "me@m1sk9.dev",
     "url": "mailto:me@m1sk9.dev"
   }

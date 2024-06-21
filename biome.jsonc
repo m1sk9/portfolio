@@ -11,5 +11,13 @@
   },
   "formatter": {
     "indentStyle": "space"
-  }
+  },
+  "overrides": [
+    {
+      "include": ["node_modules/**"],
+      "linter": {
+        "enabled": false
+      }
+    }
+  ]
 }

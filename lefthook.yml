@@ -1,0 +1,5 @@
+pre-commit:
+  commands:
+    check:
+      glob: "*.{ts,tsx}"
+      run: pnpm run check

@@ -1,6 +1,6 @@
 import type { LinksFunction } from "@remix-run/node";
 import { RiGithubLine, RiMastodonLine } from "@remixicon/react";
-import styles from "../../styles/ components/profile.css";
+import styles from "../../styles/components/profile.css?url";
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 

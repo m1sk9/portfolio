@@ -1,6 +1,7 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
 import type { LinksFunction } from "@remix-run/node";
 import { Links, Meta, Outlet, Scripts } from "@remix-run/react";
+import { LyricRoll } from "./components/molecules/LyricRoll";
 import styles from "./styles/root.module.css";
 
 export const links: LinksFunction = () => {
@@ -55,8 +56,16 @@ export default function App() {
         <Links />
       </head>
       <body className={styles.root}>
-        <Outlet />
+        <div className={styles.container}>
+          <Outlet />
+        </div>
         <Scripts />
+
+        <br />
+        <LyricRoll />
+        <div className={styles.footer}>
+          &copy; {new Date().getFullYear()} m1sk9
+        </div>
       </body>
     </html>
   );

@@ -1,0 +1,18 @@
+[
+  {
+    "sections": "Language",
+    "skills": ["TypeScript (JavaScript)", "Kotlin", "Rust", "Python"]
+  },
+  {
+    "sections": "Frontend",
+    "skills": ["HTML5", "CSS", "React", "Next.js"]
+  },
+  {
+    "sections": "Backend",
+    "skills": ["Node.js", "Deno"]
+  },
+  {
+    "sections": "Others",
+    "skills": ["Git", "GitHub", "Docker"]
+  }
+]

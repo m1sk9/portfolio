@@ -1,49 +1,45 @@
 {
   "name": "portfolio",
-  "version": "4",
+  "type": "module",
+  "packageManager": "pnpm@9.4.0",
   "private": true,
-  "packageManager": "pnpm@8.15.8",
+  "engines": {
+    "node": "=20.15.0"
+  },
   "author": {
     "name": "m1sk9",
     "email": "me@m1sk9.dev"
   },
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "format": "prettier --write \"./src/**/*.astro\"",
-    "format:check": "prettier --check \"./src/**/*.astro\"",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "postinstall": "lefthook install",
-    "prepare": "panda codegen"
+    "start": "remix-serve ./build/server/index.js",
+    "build": "remix vite:build",
+    "dev": "remix vite:dev",
+    "format": "biome format --write .",
+    "lint": "biome lint ./app",
+    "lint:fix": "biome lint --write ./app",
+    "check": "biome check ./app",
+    "check:fix": "biome check --write ./app",
+    "typecheck": "tsc --noEmit",
+    "postinstall": "lefthook install"
   },
   "dependencies": {
-    "@astrojs/check": "^0.7.0",
-    "@astrojs/react": "^3.5.0",
-    "@iconify-json/ri": "^1.1.20",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "astro": "^4.8.6",
-    "astro-icon": "^1.1.0",
+    "@remix-run/css-bundle": "^2.9.2",
+    "@remix-run/node": "^2.9.2",
+    "@remix-run/react": "^2.9.2",
+    "@remix-run/serve": "^2.9.2",
+    "@remixicon/react": "^4.2.0",
+    "isbot": "^5.1.9",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "sharp": "^0.33.4",
-    "zenn-content-css": "^0.1.153",
-    "zenn-markdown-html": "^0.1.153"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@pandacss/astro": "^0.25.0",
-    "@pandacss/dev": "^0.41.0",
-    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
-    "@typescript-eslint/eslint-plugin": "^7.0.0",
-    "eslint": "^9.3.0",
-    "eslint-plugin-astro": "^1.2.0",
-    "lefthook": "^1.6.12",
-    "prettier": "^3.2.5",
-    "prettier-plugin-astro": "^0.14.0",
-    "typescript": "^5.4.5"
+    "@biomejs/biome": "1.8.2",
+    "@remix-run/dev": "^2.9.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "lefthook": "^1.6.17",
+    "typescript": "^5.5.2",
+    "vite": "^5.3.1",
+    "vite-tsconfig-paths": "^4.3.2"
   }
 }

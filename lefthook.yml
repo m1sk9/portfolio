@@ -1,8 +1,5 @@
 pre-commit:
   commands:
     check:
-      glob: '*.astro'
-      run: pnpm run format:check
-    lint:
-      glob: '*.astro'
-      run: pnpm run lint
+      glob: "*.{ts,tsx}"
+      run: pnpm run check

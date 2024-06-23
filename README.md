@@ -1,26 +1,9 @@
-# m1sk9.dev & blog (v4)
+# m1sk9.dev
 
-![Vercel](https://vercelbadge.vercel.app/api/m1sk9/portfolio)
-[![build ci](https://github.com/m1sk9/portfolio/actions/workflows/build.yaml/badge.svg)](https://github.com/m1sk9/portfolio/actions/workflows/build.yaml)
-
-m1sk9's portfolio.
-
-Built with Astro + PandaCSS.
-
-## Development
-
-- Start development server:
-
-```sh
-pnpm run dev
-```
-
-- Build a portfolio:
-
-```sh
-pnpm run build
-```
+m1sk9's personal website. Using React + [Remix](https://remix.run).
 
 ---
 
-- [v3 (archive)](https://github.com/m1sk9/portfolio/tree/v3)
+**Archives**:
+- [v4](https://github.com/m1sk9/portfolio/tree/v4)
+- [v3](https://github.com/m1sk9/portfolio/tree/v3)

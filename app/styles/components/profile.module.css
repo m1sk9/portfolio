@@ -1,0 +1,17 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
+    margin-top: 100px;
+}
+
+.profile img {
+    border-radius: 50%;
+}
+
+.profile nav {
+    display: flex;
+    gap: 0.5rem;
+}
+

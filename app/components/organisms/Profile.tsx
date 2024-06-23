@@ -1,4 +1,10 @@
-import { RiGithubLine, RiMastodonLine } from "@remixicon/react";
+import {
+  RiDiscordFill,
+  RiGithubFill,
+  RiKey2Line,
+  RiMastodonFill,
+  RiSpotifyFill,
+} from "@remixicon/react";
 import styles from "../../styles/components/profile.module.css";
 
 export default function Profile() {
@@ -13,14 +19,36 @@ export default function Profile() {
           target="_blank"
           rel="noreferrer noopener"
         >
-          <RiGithubLine name="ri:github-line" size={32} color={"white"} />
+          <RiGithubFill size={32} color={"white"} />
         </a>
         <a
           href="https://mstdn.maud.io/@m1sk9"
           target="_blank"
           rel="noreferrer noopener"
         >
-          <RiMastodonLine name="ri:mastodon-line" size={32} color={"white"} />
+          <RiMastodonFill size={32} color={"white"} />
+        </a>
+        <a
+          href="https://discord.com/users/586824421470109716/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <RiDiscordFill size={32} color={"white"} />
+        </a>
+        <a
+          href="https://open.spotify.com/user/61fci3294e5for4ohowut77of"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <RiSpotifyFill size={32} color={"white"} />
+        </a>
+        <a
+          href="pub.asc"
+          title="ABB3 904C 7263 155D 9F5C 34A3 198F 1B4D 8D77 678F"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <RiKey2Line size={32} color={"white"} />
         </a>
       </nav>
     </div>

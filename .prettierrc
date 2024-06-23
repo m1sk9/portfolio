@@ -1,6 +1,0 @@
-{
-  "plugins": ["prettier-plugin-astro", "@trivago/prettier-plugin-sort-imports"],
-  "singleQuote": true,
-  "semi": true,
-  "trailingComma": "none"
-}

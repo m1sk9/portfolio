@@ -1,16 +1,17 @@
-#profile {
+.profile {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 50vh;
+    align-items: right;
+    margin-top: 100px;
 }
 
-#profile img {
+.profile img {
     border-radius: 50%;
 }
 
-#profile nav {
+.profile nav {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
 }
+

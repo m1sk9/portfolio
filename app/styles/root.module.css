@@ -1,0 +1,8 @@
+.root {
+    color: white;
+    background-color: #000;
+    margin: auto;
+    max-width: 768px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

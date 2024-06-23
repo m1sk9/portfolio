@@ -1,12 +1,9 @@
-import type { LinksFunction } from "@remix-run/node";
 import { RiGithubLine, RiMastodonLine } from "@remixicon/react";
-import styles from "../../styles/components/profile.css?url";
-
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
+import styles from "../../styles/components/profile.module.css";
 
 export default function Profile() {
   return (
-    <div id="profile">
+    <div className={styles.profile}>
       <img src="icon.jpg" width={100} height={100} alt="m1sk9's icon" />
       <h2>Sho Sakuma</h2>
 

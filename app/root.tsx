@@ -1,8 +1,13 @@
+import { cssBundleHref } from "@remix-run/css-bundle";
 import type { LinksFunction } from "@remix-run/node";
 import { Links, Meta, Outlet, Scripts } from "@remix-run/react";
-import styles from "./styles/root.css?url";
+import styles from "./styles/root.module.css";
 
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
+export const links: LinksFunction = () => {
+  return [
+    ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+  ];
+};
 
 export default function App() {
   return (
@@ -49,7 +54,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className={styles.root}>
         <Outlet />
         <Scripts />
       </body>

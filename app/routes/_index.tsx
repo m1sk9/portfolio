@@ -98,11 +98,11 @@ export default function IndexPage() {
             <ul>
               <li>
                 2022/11/19〜:{" "}
-                <a href="https://seichi.click">GiganticMinecraft 運営</a>
+                <a href="https://seichi.click">GiganticMinecraft</a>
               </li>
               <li>
                 2021/12/03〜2022/11/19:{" "}
-                <a href="https://www.azisaba.net/">アジ鯖 運営</a>
+                <a href="https://www.azisaba.net/">AzisabaNetwork</a>
               </li>
             </ul>
           </li>

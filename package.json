@@ -27,8 +27,7 @@
     "@remix-run/node": "^2.9.2",
     "@remix-run/react": "^2.9.2",
     "@remix-run/serve": "^2.9.2",
-    "@remixicon/react": "^4.2.0",
-    "isbot": "^5.1.9",
+    "isbot": "^4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "../../styles/components/lyric_roll.module.css";
+import styles from "../styles/lyric_roll.module.css";
 
 interface LyricProps {
   songTitle: string;

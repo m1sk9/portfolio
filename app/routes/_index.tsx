@@ -10,7 +10,6 @@ const LinkItems: LinkProps[] = [
   },
   { name: "GitHub", id: "m1sk9", url: "https://github.com/m1sk9" },
   { name: "GitLab", id: "m1sk2", url: "https://gitlab.com/m1sk2" },
-  { name: "Blog", id: '"Nightly"を愛す', url: "https://blog.m1sk9.dev" },
   {
     name: "Spotify",
     id: "Sho Sakuma",

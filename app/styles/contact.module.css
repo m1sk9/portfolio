@@ -1,0 +1,11 @@
+.heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.contacts a {
+    text-decoration: none;
+    color: #000;
+}

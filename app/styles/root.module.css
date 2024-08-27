@@ -21,3 +21,11 @@
     align-items: right;
     margin-top: 20px;
 }
+
+a {
+    color: aqua;
+}
+
+code {
+    color: #ED706F
+}

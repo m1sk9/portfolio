@@ -60,6 +60,9 @@ export default function IndexPage() {
 
       <section>
         <h2>リンク</h2>
+        <p>
+          御用のある方は<a href="/contact">こちら</a>からお問い合わせください.
+        </p>
         <ul>
           {LinkItems.map((i) => (
             <li key={i.id}>

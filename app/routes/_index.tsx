@@ -1,5 +1,5 @@
 import { LyricRoll } from "~/components/LyricRoll";
-import styles from "../styles/style.module.css";
+import styles from "../styles/index.module.css";
 
 const LINKS = [
   {

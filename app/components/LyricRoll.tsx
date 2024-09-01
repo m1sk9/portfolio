@@ -9,37 +9,35 @@ interface LyricProps {
 }
 
 export const LyricRoll = () => {
-  const [lyricData, setLyricData] = useState<LyricProps>();
+  const [data, setData] = useState<LyricProps>();
 
   useEffect(() => {
     const fetchLyrics = async () => {
       const res = await fetch("/lyrics.json");
       const data = (await res.json()) as LyricProps[];
       const selected = data[Math.floor(Math.random() * data.length)];
-      setLyricData(selected);
+      setData(selected);
     };
     fetchLyrics();
   }, []);
 
   return (
-    <div className={styles.lyric}>
-      <p>{lyricData?.lyrics}</p>
-      <div className={styles.lyric_source}>
-        {lyricData?.source ? (
-          <a
-            href={lyricData?.source}
-            target="_blank"
-            rel="noreferrer"
-            className={styles.lyric_source}
-          >
-            {lyricData?.songTitle} - {lyricData?.artist}
-          </a>
-        ) : (
-          <p className={styles.lyric_source}>
-            {lyricData?.songTitle} - {lyricData?.artist}
-          </p>
-        )}
-      </div>
+    <div className={styles.lyrics_box}>
+      <p>{data?.lyrics}</p>
+      {data?.source ? (
+        <a
+          href={data?.source}
+          target="_blank"
+          rel="noreferrer"
+          className={styles.lyric_source}
+        >
+          {data?.songTitle} - {data?.artist}
+        </a>
+      ) : (
+        <p className={styles.lyric_source}>
+          {data?.songTitle} - {data?.artist}
+        </p>
+      )}
     </div>
   );
 };

@@ -1,8 +1,7 @@
-import type { FavoriteProps, LinkProps } from "../types";
+import { LyricRoll } from "~/components/LyricRoll";
+import styles from "../styles/index.module.css";
 
-import styles from "../styles/style.module.css";
-
-const LinkItems: LinkProps[] = [
+const LINKS = [
   {
     name: "Mastodon",
     id: "@m1sk9@mstdn.maud.io",
@@ -10,6 +9,7 @@ const LinkItems: LinkProps[] = [
   },
   { name: "GitHub", id: "m1sk9", url: "https://github.com/m1sk9" },
   { name: "GitLab", id: "m1sk2", url: "https://gitlab.com/m1sk2" },
+  { name: "Steam", id: "m1sk9", url: "https://steamcommunity.com/id/m1sk9/" },
   {
     name: "Spotify",
     id: "Sho Sakuma",
@@ -17,117 +17,74 @@ const LinkItems: LinkProps[] = [
   },
 ];
 
-const FavoriteItems: FavoriteProps[] = [
-  { heading: "OS", nesting: ["macOS", "Arch Linux"] },
-  { heading: "Browser", nesting: ["Firefox Nightly"] },
-  { heading: "Email Client", nesting: ["Thunderbird Daily"] },
-  {
-    heading: "Editor",
-    nesting: ["Visual Studio Code", "Zed", "NeoVim", "(JetBrains IDE)"],
-  },
-  { heading: "Terminal / Shell", nesting: ["Alacritty / fish"] },
-  { heading: "Language", nesting: ["TypeScript", "Rust", "Kotlin"] },
-  {
-    heading: "Music",
-    nesting: [
-      "Mrs. Green APPLE",
-      "ONE OK ROCK",
-      "Survive Said The Prophet",
-      "羊文学",
-      "緑黄色社会",
-      "King Gnu",
-      "... And more",
-    ],
-  },
-];
-
 export default function IndexPage() {
   return (
     <main>
       <div className={styles.profile}>
-        <img src="icon.jpg" width={100} height={100} alt="m1sk9's icon" />
-        <h1>Sho Sakuma</h1>
+        <img
+          src="https://github.com/m1sk9.png"
+          width={100}
+          height={100}
+          alt="m1sk9's icon"
+        />
+        <div>
+          <h1>Sho Sakuma / m1sk9</h1>
+        </div>
       </div>
 
       <section>
-        <h2>興味</h2>
+        <h2>Links</h2>
         <ul>
-          <li>組み込み</li>
-          <li>低レイヤ</li>
-          <li>AI</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>リンク</h2>
-        <p>
-          御用のある方は<a href="/contact">こちら</a>からお問い合わせください.
-        </p>
-        <ul>
-          {LinkItems.map((i) => (
-            <li key={i.id}>
-              {i.name}:{" "}
-              <a href={i.url} target="_blank" rel="noopener noreferrer">
-                {i.id}
+          {LINKS.map((link) => (
+            <li key={link.id}>
+              {link.name}:{" "}
+              <a href={link.url} target="_blank" rel="noreferrer">
+                {link.id}
               </a>
             </li>
           ))}
         </ul>
-      </section>
-
-      <section>
-        <h2>使っているもの / 好きなもの</h2>
-        <ul>
-          {FavoriteItems.map((i) => (
-            <li key={i.heading}>
-              {i.heading}
-              <ul>
-                {i.nesting?.map((i) => (
-                  <li key={i}>{i}</li>
-                ))}
-              </ul>
-            </li>
-          ))}
-          <a href="/lyrics.json">ページ最下部の排出歌詞一覧</a>
-        </ul>
-      </section>
-
-      <section>
-        <h2>活動</h2>
-        <ul>
-          <li>
-            Minecraft:
-            <ul>
-              <li>
-                2022/11/19〜:{" "}
-                <a href="https://seichi.click">GiganticMinecraft</a>
-              </li>
-              <li>
-                2021/12/03〜2022/11/19:{" "}
-                <a href="https://www.azisaba.net/">AzisabaNetwork</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            OSS:
-            <ul>
-              <li>
-                2023/09/10〜:{" "}
-                <a href="https://link.pulsate.dev/github">Pulsate</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>OpenPGP Key</h2>
         <p>
-          fingerpoint:{" "}
-          <code>ABB3 904C 7263 155D 9F5C 34A3 198F 1B4D 8D77 678F</code>
+          Please contact us <a href="/contact">here</a> for any inquiry.
         </p>
-        <a href="pub.asc">ここから</a>ダウンロードできます.
       </section>
+
+      <section>
+        <h2>Activities</h2>
+        <ul>
+          <li>
+            Developer of{" "}
+            <a
+              href="https://github.com/m1sk9/babyrite"
+              target="_blank"
+              rel="noreferrer"
+            >
+              babyrite
+            </a>
+            , a citation message Discord bot.
+          </li>
+          <li>
+            Co-founder and developer of{" "}
+            <a
+              href="https://github.com/pulsate-dev/pulsate"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Pulsate
+            </a>
+            , a easy-to-change, faster, developer friendly next generation
+            decentralized social media.
+          </li>
+          <li>
+            Administrator of{" "}
+            <a href="https://seichi.click" target="_blank" rel="noreferrer">
+              GiganticMinecraft.
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <LyricRoll />
     </main>
   );
 }

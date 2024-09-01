@@ -5,33 +5,34 @@ export default function Contact() {
     <main>
       <div className={styles.heading}>
         <h1>Contact</h1>
-        <p>御用のある方は以下の連絡先をご利用ください</p>
+        <p>Please use the contact information below.</p>
       </div>
 
       <section>
         <ul>
           <li>
-            メール: <a href="mailto:me@m1sk9.dev">me@m1sk9.dev</a>
+            Email: <a href="mailto:me@m1sk9.dev">me@m1sk9.dev</a>
             <ul>
               <li>
-                メールサーバがないので受信専用です.
-                返信が必要な場合はそれ以外の連絡先からお願いします.
+                This is for incoming messages only, as we do not have a mail
+                server. If you need a reply, please use other contact
+                information.
               </li>
             </ul>
           </li>
           <li>
             Discord:{" "}
             <a href="https://discord.com/users/586824421470109716">m1sk9</a>{" "}
-            (フレンドのみ)
+            (Only for friends)
             <ul>
               <li>
-                スパム防止のためフレンド以外からDM /
-                フレンド依頼は受信していません.
+                To prevent spam, I do not receive DMs or friend requests from
+                non-friends.
               </li>
               <li>
-                問い合わせが必要な場合は{" "}
-                <a href="https://discord.gg/eGUXXPT5Gs">私のDiscord鯖</a>{" "}
-                から問い合わせてください.
+                If you need to inquire{" "}
+                <a href="https://discord.gg/eGUXXPT5Gs">My Discord server</a> to
+                contact us.
               </li>
             </ul>
           </li>
@@ -40,26 +41,25 @@ export default function Contact() {
             <a href="https://mstdn.maud.io/@m1sk9">@m1sk9@mstdn.maud.io</a>
             <ul>
               <li>
-                投稿範囲を <code>Direct</code> にして私をメンションしてください.
+                Mention me with <code>Direct</code> in the posting range.
               </li>
               <li>
-                <div style={{ color: "yellow" }}>
-                  注意: Mastodon を始めとする主要の ActicityPub 実装は
-                  End-to-end 暗号化をサポートしていません.
-                  機密情報の送信には注意してください.
-                </div>
+                I have deleted Twitter. I am fed up with the management and will
+                not use it anymore.
+              </li>
+              <li>
+                Note: Mastodon and other major ActicityPub implementations do
+                not support end-to-end encryption. Be careful when sending
+                sensitive information.
               </li>
             </ul>
           </li>
         </ul>
       </section>
 
-      <section>
-        <h3>ギガンティック☆整地鯖のプレイヤーへ</h3>
-        <p>
-          これらの連絡先に対してサーバーに関するお問い合わせをしないでください.{" "}
-        </p>
-      </section>
+      <div>
+        <a href="/">← Back</a>
+      </div>
     </main>
   );
 }

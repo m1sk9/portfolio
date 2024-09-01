@@ -1,3 +1,11 @@
+.lyrics_box {
+	margin-top: 50px;
+}
+
+.lyrics {
+    margin-bottom: 4px;
+}
+
 .lyric_source {
     color: gray;
     text-decoration: none;

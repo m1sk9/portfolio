@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&family=M+PLUS+Rounded+1c&display=swap");
 
 .root {
-    color: white;
-    background-color: #000;
+    color: 000;
+    background-color: white;
     font-family: "IBM Plex Sans JP", sans-serif;
     font-size: 14px;
 }
@@ -19,11 +19,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: right;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 a {
-    color: aqua;
+    color: rgb(22, 192, 192);
 }
 
 code {

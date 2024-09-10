@@ -29,11 +29,6 @@ export default function Contact() {
                 To prevent spam, I do not receive DMs or friend requests from
                 non-friends.
               </li>
-              <li>
-                If you need to inquire{" "}
-                <a href="https://discord.gg/eGUXXPT5Gs">My Discord server</a> to
-                contact us.
-              </li>
             </ul>
           </li>
           <li>

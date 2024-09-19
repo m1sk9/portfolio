@@ -58,7 +58,7 @@ export default function App() {
         <div className={styles.container}>
           <Outlet />
           <div className={styles.footer}>
-            &copy; {new Date().getFullYear()} m1sk9, icon by @316_xxxx
+            &copy; {new Date().getFullYear()} m1sk9
           </div>
         </div>
         <Scripts />

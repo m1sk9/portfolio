@@ -1,3 +1,11 @@
+> [!IMPORTANT]
+>
+> This version of the portfolio has been deprecated. **You will already be redirected to the site**.
+> 
+> The information on this site may be out of date and I am not responsible for this. 
+>
+> The new portfolio can be found [here](https://github.com/m1sk9/m1s.dev).
+
 # Portfolio
 
 [![Vercel](https://vercelbadge.vercel.app/api/m1sk9/portfolio)](https://m1sk9.dev)
